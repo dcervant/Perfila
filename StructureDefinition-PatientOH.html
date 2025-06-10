@@ -280,7 +280,101 @@
   </table>
 
 <p>
-<p>FHIR PatientOH Profile, for OH interoperability scenarios, based on the national CORE Patient Profile defined by HL7 OH.</p>
+<p>Define el perfil del Paciente para el ecosistema CUIDA, centrado en la información específica del rol de paciente y su vinculación con el registro central de Persona (PersonOH).</p>
+
+</p>
+
+<p>
+
+<h1 id="perfil-patientoh-representación-del-rol-de-paciente-en-el-ecosistema-cuida">Perfil PatientOH: Representación del Rol de Paciente en el Ecosistema CUIDA</h1>
+
+<h2 id="1-descripción-del-recurso">1. Descripción del Recurso</h2>
+
+<p>Este perfil, <strong>PatientOH</strong>, define cómo representar la información específica de un individuo en su rol como paciente dentro del ecosistema de salud CUIDA. Se basa en el recurso <code class="language-plaintext highlighter-rouge">Patient</code> de FHIR R4 y está diseñado para complementar el perfil central <code class="language-plaintext highlighter-rouge">PersonOH</code>.</p>
+
+<p><strong>Funcionalidad Principal:</strong></p>
+
+<ul>
+  <li><strong>Representación del Rol de Paciente:</strong> Mientras <code class="language-plaintext highlighter-rouge">PersonOH</code> gestiona la información demográfica central y los identificadores generales de un individuo, <code class="language-plaintext highlighter-rouge">PatientOH</code> se enfoca en los datos relevantes para la atención médica y administrativa del paciente.</li>
+  <li><strong>Vinculación Obligatoria a PersonOH:</strong> Cada recurso <code class="language-plaintext highlighter-rouge">PatientOH</code> <strong>debe</strong> estar asociado a un recurso <code class="language-plaintext highlighter-rouge">PersonOH</code> a través del cual se accede a la información demográfica fundamental (nombres, género, fecha de nacimiento, telecomunicaciones y direcciones generales). Esta vinculación se establece desde el recurso <code class="language-plaintext highlighter-rouge">PersonOH</code> (mediante <code class="language-plaintext highlighter-rouge">Person.link.target</code> apuntando a <code class="language-plaintext highlighter-rouge">PatientOH</code>). El perfil <code class="language-plaintext highlighter-rouge">PatientOH</code> intencionadamente omite la duplicación de estos datos demográficos (<code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">telecom</code>, <code class="language-plaintext highlighter-rouge">gender</code>, <code class="language-plaintext highlighter-rouge">birthDate</code>, <code class="language-plaintext highlighter-rouge">address</code> tienen cardinalidad <code class="language-plaintext highlighter-rouge">..0</code>).</li>
+  <li><strong>Gestión de Identificadores de Paciente:</strong> <code class="language-plaintext highlighter-rouge">PatientOH</code> es responsable de gestionar los números de historia clínica (<code class="language-plaintext highlighter-rouge">identifier</code>) asignados al paciente por las diversas organizaciones proveedoras de salud.</li>
+  <li><strong>Información Específica del Paciente:</strong> Captura datos como el estado civil, contactos de emergencia, y clasificaciones o religiones relevantes para la atención.</li>
+</ul>
+
+<h2 id="2-elementos-esenciales-específicos-del-rol-de-paciente">2. Elementos Esenciales (Específicos del Rol de Paciente)</h2>
+
+<p>Los siguientes elementos <strong>deben</strong> estar presentes en cada instancia de <code class="language-plaintext highlighter-rouge">PatientOH</code> que represente información específica del paciente:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">identifier</code> (Número de Historia Clínica):</strong> Al menos un número de historia clínica asignado por una organización proveedora.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">identifier.use</code>: Debe ser <code class="language-plaintext highlighter-rouge">#official</code>.</li>
+      <li><code class="language-plaintext highlighter-rouge">identifier.type.coding.code</code>: Debe ser <code class="language-plaintext highlighter-rouge">#MR</code> (Medical Record Number).</li>
+      <li><code class="language-plaintext highlighter-rouge">identifier.system</code>: URI del sistema de información que asigna el número de historia clínica.</li>
+      <li><code class="language-plaintext highlighter-rouge">identifier.value</code>: El valor del número de historia clínica.</li>
+      <li><code class="language-plaintext highlighter-rouge">identifier.assigner</code>: Referencia a la <code class="language-plaintext highlighter-rouge">OrganizationOH</code> que asigna el identificador.</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">active</code> (Estado del Paciente):</strong> Indica si el registro del paciente está activo para la atención.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">maritalStatus</code> (Estado Civil):</strong> Estado civil del paciente.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">maritalStatus.coding</code>: Codificación del estado civil.</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">contact</code> (Contacto de Emergencia/Relacionado):</strong> Información de al menos un contacto.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">contact.relationship</code>: Tipo de relación del contacto con el paciente.</li>
+      <li><code class="language-plaintext highlighter-rouge">contact.name</code>: Nombre completo del contacto.
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">contact.name.family.extension</code> (Apellido Paterno y Materno del Contacto): Se deben soportar las extensiones para los apellidos del contacto.</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">contact.telecom</code>: Información de telecomunicación del contacto.</li>
+      <li><code class="language-plaintext highlighter-rouge">contact.address.type</code>: Tipo de dirección del contacto.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="3-elementos-de-soporte-obligatorio-must-support---ms">3. Elementos de Soporte Obligatorio (Must Support - MS)</h2>
+
+<p>Los sistemas que conformen con este perfil <strong>deben</strong> ser capaces de procesar y persistir el siguiente elemento si está presente:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">identifier.value</code></strong>: El valor del número de historia clínica.</li>
+</ul>
+
+<h2 id="4-lógica-de-identificadores-específicos-del-paciente">4. Lógica de Identificadores (Específicos del Paciente)</h2>
+
+<p>El elemento <code class="language-plaintext highlighter-rouge">identifier</code> en <code class="language-plaintext highlighter-rouge">PatientOH</code> se utiliza exclusivamente para los números de historia clínica (MRN) asignados por las organizaciones proveedoras de salud.</p>
+
+<ul>
+  <li>Cada <code class="language-plaintext highlighter-rouge">identifier</code> representa un MRN de una institución específica.</li>
+  <li><code class="language-plaintext highlighter-rouge">identifier.type</code> se fija a 'MR'.</li>
+  <li><code class="language-plaintext highlighter-rouge">identifier.system</code> identifica el sistema de la organización proveedora que emitió el MRN.</li>
+  <li><code class="language-plaintext highlighter-rouge">identifier.assigner</code> referencia a la <code class="language-plaintext highlighter-rouge">OrganizationOH</code> proveedora.</li>
+  <li>Un paciente puede tener múltiples <code class="language-plaintext highlighter-rouge">identifier</code> si ha sido atendido en varias instituciones.</li>
+</ul>
+
+<h2 id="5-extensiones-específicas-del-paciente">5. Extensiones (Específicas del Paciente)</h2>
+
+<p>El perfil <code class="language-plaintext highlighter-rouge">PatientOH</code> utiliza las siguientes extensiones para capturar información adicional relevante:</p>
+
+<ul>
+  <li><strong>Para <code class="language-plaintext highlighter-rouge">Patient.extension</code>:</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Extension-Classification</code>: Clasificación del paciente (ej. tipo de seguro, programa especial).</li>
+      <li><code class="language-plaintext highlighter-rouge">Extension-Religion</code>: Religión del paciente.</li>
+    </ul>
+  </li>
+  <li><strong>Para <code class="language-plaintext highlighter-rouge">Patient.contact.name.family</code> (dentro del apellido del contacto):</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Extension-FathersFamilyName</code>: Apellido paterno del contacto.</li>
+      <li><code class="language-plaintext highlighter-rouge">Extension-MothersFamilyName</code>: Apellido materno del contacto.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Este perfil <code class="language-plaintext highlighter-rouge">PatientOH</code>, en conjunto con <code class="language-plaintext highlighter-rouge">PersonOH</code>, asegura una representación completa y no redundante de los individuos, separando la identidad central de la información específica del rol de paciente, crucial para la operativa del proyecto CUIDA.</p>
 
 </p>
 
@@ -3376,7 +3470,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://MyOrg.Jur">MyOrg</a>.  Package myorg.fhir.jurisdiction.laboratory#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 9, 2025 19:28-0500">2025-06-09</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://MyOrg.Jur">MyOrg</a>.  Package myorg.fhir.jurisdiction.laboratory#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 9, 2025 20:41-0500">2025-06-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <div style="color: #333333" >
