@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>OneHealth Patient - MyOrg Jurisdiction Laboratory Report v0.0.1</title>
+    <title>Patient - MyOrg Jurisdiction Laboratory Report v0.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -50,8 +50,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"4.3"}
-    h3,h4,h5,h6{--heading-prefix:"4.3"}</style>
+    <style type="text/css">h2{--heading-prefix:"4.5"}
+    h3,h4,h5,h6{--heading-prefix:"4.5"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -150,7 +150,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>OneHealth Patient</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Patient</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -163,7 +163,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MyOrg Jurisdiction Laboratory Report - Local Development build (v0.0.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://myorg.jurisdiction/fhir/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
   
 
 
@@ -229,7 +229,7 @@
   <a name="root"> </a>
   <h2 id="root">Resource Profile:
 
-    OneHealth Patient
+    Patient
 
 
 
@@ -301,9 +301,9 @@
   <li><strong>Información Específica del Paciente:</strong> Captura datos como el estado civil, contactos de emergencia, y clasificaciones o religiones relevantes para la atención.</li>
 </ul>
 
-<h2 id="2-elementos-esenciales-específicos-del-rol-de-paciente">2. Elementos Esenciales (Específicos del Rol de Paciente)</h2>
+<h2 id="2-elementos-esenciales">2. Elementos Esenciales</h2>
 
-<p>Los siguientes elementos <strong>deben</strong> estar presentes en cada instancia de <code class="language-plaintext highlighter-rouge">PatientOH</code> que represente información específica del paciente:</p>
+<p>Los siguientes elementos <strong>deben</strong> estar presentes en cada instancia de <code class="language-plaintext highlighter-rouge">PatientOH</code>:</p>
 
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">identifier</code> (Número de Historia Clínica):</strong> Al menos un número de historia clínica asignado por una organización proveedora.
@@ -316,34 +316,9 @@
     </ul>
   </li>
   <li><strong><code class="language-plaintext highlighter-rouge">active</code> (Estado del Paciente):</strong> Indica si el registro del paciente está activo para la atención.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">maritalStatus</code> (Estado Civil):</strong> Estado civil del paciente.
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">maritalStatus.coding</code>: Codificación del estado civil.</li>
-    </ul>
-  </li>
-  <li><strong><code class="language-plaintext highlighter-rouge">contact</code> (Contacto de Emergencia/Relacionado):</strong> Información de al menos un contacto.
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">contact.relationship</code>: Tipo de relación del contacto con el paciente.</li>
-      <li><code class="language-plaintext highlighter-rouge">contact.name</code>: Nombre completo del contacto.
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">contact.name.family.extension</code> (Apellido Paterno y Materno del Contacto): Se deben soportar las extensiones para los apellidos del contacto.</li>
-        </ul>
-      </li>
-      <li><code class="language-plaintext highlighter-rouge">contact.telecom</code>: Información de telecomunicación del contacto.</li>
-      <li><code class="language-plaintext highlighter-rouge">contact.address.type</code>: Tipo de dirección del contacto.</li>
-    </ul>
-  </li>
 </ul>
 
-<h2 id="3-elementos-de-soporte-obligatorio-must-support---ms">3. Elementos de Soporte Obligatorio (Must Support - MS)</h2>
-
-<p>Los sistemas que conformen con este perfil <strong>deben</strong> ser capaces de procesar y persistir el siguiente elemento si está presente:</p>
-
-<ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">identifier.value</code></strong>: El valor del número de historia clínica.</li>
-</ul>
-
-<h2 id="4-lógica-de-identificadores-específicos-del-paciente">4. Lógica de Identificadores (Específicos del Paciente)</h2>
+<h2 id="3-lógica-de-identificadores-específicos-del-paciente">3. Lógica de Identificadores (Específicos del Paciente)</h2>
 
 <p>El elemento <code class="language-plaintext highlighter-rouge">identifier</code> en <code class="language-plaintext highlighter-rouge">PatientOH</code> se utiliza exclusivamente para los números de historia clínica (MRN) asignados por las organizaciones proveedoras de salud.</p>
 
@@ -355,15 +330,35 @@
   <li>Un paciente puede tener múltiples <code class="language-plaintext highlighter-rouge">identifier</code> si ha sido atendido en varias instituciones.</li>
 </ul>
 
-<h2 id="5-extensiones-específicas-del-paciente">5. Extensiones (Específicas del Paciente)</h2>
+<h2 id="4-extensiones-específicas-del-paciente">4. Extensiones (Específicas del Paciente)</h2>
 
 <p>El perfil <code class="language-plaintext highlighter-rouge">PatientOH</code> utiliza las siguientes extensiones para capturar información adicional relevante:</p>
 
 <ul>
   <li><strong>Para <code class="language-plaintext highlighter-rouge">Patient.extension</code>:</strong>
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">Extension-Classification</code>: Clasificación del paciente (ej. tipo de seguro, programa especial).</li>
-      <li><code class="language-plaintext highlighter-rouge">Extension-Religion</code>: Religión del paciente.</li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">Extension-Classification</code>: Clasificación del paciente (ej. vip</td>
+              <td>normal</td>
+              <td>sin clasificar).</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">Extension-Religion</code>: Religión del paciente (ej. catolicismo</td>
+              <td>evangelismo</td>
+              <td>no informa).</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
     </ul>
   </li>
   <li><strong>Para <code class="language-plaintext highlighter-rouge">Patient.contact.name.family</code> (dentro del apellido del contacto):</strong>
@@ -473,11 +468,11 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Extensions that cannot be ignored<br/><span style="font-weight:bold">ele-1: </span>All FHIR elements must have a @value or children<br/><span style="font-weight:bold">ext-1: </span>Must have either extensions or value[x], not both<br/></td></tr>
 
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ad" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier" title="Patient medical record number, assigned by each of the provider organizations where he/she receives health care services. [ES: Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud.]" data-no-external="true">identifier</a><a name="k-Patient.identifier"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ad" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier" title="Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud." data-no-external="true">identifier</a><a name="k-Patient.identifier"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Patient Medical Record Number<br/><span style="font-weight:bold">ele-1: </span>All FHIR elements must have a @value or children<br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Número de Historia Clínica del Paciente [US: Patient Medical Record Number]<br/><span style="font-weight:bold">ele-1: </span>All FHIR elements must have a @value or children<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ada" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier.use" title="The purpose of this identifier." data-no-external="true">use</a><a name="k-Patient.identifier.use"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is a modifier element">?!</span><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
@@ -757,11 +752,11 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Patient religion<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-Extension-Religion.html">https://fhir.onehealth.com.pe/StructureDefinition/Extension-Religion</a></td></tr>
 
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier" title="Patient medical record number, assigned by each of the provider organizations where he/she receives health care services. [ES: Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud.]" data-no-external="true">identifier</a><a name="d-Patient.identifier"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier" title="Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud." data-no-external="true">identifier</a><a name="d-Patient.identifier"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Patient Medical Record Number</td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Número de Historia Clínica del Paciente [US: Patient Medical Record Number]</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aba" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier.use" data-no-external="true">use</a><a name="d-Patient.identifier.use"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -1192,11 +1187,11 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Extensions that cannot be ignored<br/></td></tr>
 
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ai" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier" title="Patient medical record number, assigned by each of the provider organizations where he/she receives health care services. [ES: Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud.]" data-no-external="true">identifier</a><a name="Patient.identifier"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ai" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier" title="Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud." data-no-external="true">identifier</a><a name="Patient.identifier"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Patient Medical Record Number<br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Número de Historia Clínica del Paciente [US: Patient Medical Record Number]<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aia" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." data-no-external="true">id</a><a name="Patient.identifier.id"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -1765,7 +1760,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     <div id="tabs-json">
       <div id="json">
         <div id="json-inner">
-           // <span style="color: navy; opacity: 0.8">OneHealth Patient</span>
+           // <span style="color: navy; opacity: 0.8">Patient</span>
  {
    "resourceType" : "Patient",
     "<a href="StructureDefinition-PatientOH.html#Patient.id" title="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#id">id</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Logical id of this artifact</span>
@@ -1784,7 +1779,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         "<a href="StructureDefinition-PatientOH.html#Patient.extension.valueCode" title="catolicismo | evangelismo | no informa" class="dict"><span style="text-decoration: underline">valueCode</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;" <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">catolicismo | evangelismo | no informa</span>
       }
     ],
-    "<a href="StructureDefinition-PatientOH.html#Patient.identifier" title="Patient medical record number, assigned by each of the provider organizations where he/she receives health care services. [ES: Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud.]" class="dict"><span style="text-decoration: underline">identifier</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Patient Medical Record Number</span>
+    "<a href="StructureDefinition-PatientOH.html#Patient.identifier" title="Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud" class="dict"><span style="text-decoration: underline">identifier</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Número de Historia Clínica del Paciente [US: Patient Medical Record Number]</span>
       "extension": [
       ],
       "<a href="StructureDefinition-PatientOH.html#Patient.identifier.use" title="The purpose of this identifier (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">use</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">usual | official | temp | secondary | old (If known)</a></span>
@@ -1981,11 +1976,11 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Extensions that cannot be ignored<br/><span style="font-weight:bold">ele-1: </span>All FHIR elements must have a @value or children<br/><span style="font-weight:bold">ext-1: </span>Must have either extensions or value[x], not both<br/></td></tr>
 
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ad" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier" title="Patient medical record number, assigned by each of the provider organizations where he/she receives health care services. [ES: Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud.]" data-no-external="true">identifier</a><a name="ka-Patient.identifier"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ad" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier" title="Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud." data-no-external="true">identifier</a><a name="ka-Patient.identifier"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Patient Medical Record Number<br/><span style="font-weight:bold">ele-1: </span>All FHIR elements must have a @value or children<br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Número de Historia Clínica del Paciente [US: Patient Medical Record Number]<br/><span style="font-weight:bold">ele-1: </span>All FHIR elements must have a @value or children<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ada" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier.use" title="The purpose of this identifier." data-no-external="true">use</a><a name="ka-Patient.identifier.use"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is a modifier element">?!</span><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
@@ -2265,11 +2260,11 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Patient religion<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-Extension-Religion.html">https://fhir.onehealth.com.pe/StructureDefinition/Extension-Religion</a></td></tr>
 
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier" title="Patient medical record number, assigned by each of the provider organizations where he/she receives health care services. [ES: Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud.]" data-no-external="true">identifier</a><a name="da-Patient.identifier"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier" title="Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud." data-no-external="true">identifier</a><a name="da-Patient.identifier"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Patient Medical Record Number</td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Número de Historia Clínica del Paciente [US: Patient Medical Record Number]</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aba" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier.use" data-no-external="true">use</a><a name="da-Patient.identifier.use"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -2699,11 +2694,11 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Extensions that cannot be ignored<br/></td></tr>
 
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ai" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier" title="Patient medical record number, assigned by each of the provider organizations where he/she receives health care services. [ES: Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud.]" data-no-external="true">identifier</a><a name="sa-Patient.identifier"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ai" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier" title="Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud." data-no-external="true">identifier</a><a name="sa-Patient.identifier"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Patient Medical Record Number<br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Número de Historia Clínica del Paciente [US: Patient Medical Record Number]<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aia" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-PatientOH-definitions.html#Patient.identifier.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." data-no-external="true">id</a><a name="sa-Patient.identifier.id"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -3272,7 +3267,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
           <b>JSON Template</b>
         </p>
         <div id="all-json-inner">
-           // <span style="color: navy; opacity: 0.8">OneHealth Patient</span>
+           // <span style="color: navy; opacity: 0.8">Patient</span>
  {
    "resourceType" : "Patient",
     "<a href="StructureDefinition-PatientOH.html#Patient.id" title="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#id">id</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Logical id of this artifact</span>
@@ -3291,7 +3286,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         "<a href="StructureDefinition-PatientOH.html#Patient.extension.valueCode" title="catolicismo | evangelismo | no informa" class="dict"><span style="text-decoration: underline">valueCode</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;" <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">catolicismo | evangelismo | no informa</span>
       }
     ],
-    "<a href="StructureDefinition-PatientOH.html#Patient.identifier" title="Patient medical record number, assigned by each of the provider organizations where he/she receives health care services. [ES: Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud.]" class="dict"><span style="text-decoration: underline">identifier</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Patient Medical Record Number</span>
+    "<a href="StructureDefinition-PatientOH.html#Patient.identifier" title="Número de historia clínica del paciente, asignado por cada una de las organizaciones prestadoras donde recibe servicios de atención en salud" class="dict"><span style="text-decoration: underline">identifier</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Número de Historia Clínica del Paciente [US: Patient Medical Record Number]</span>
       "extension": [
       ],
       "<a href="StructureDefinition-PatientOH.html#Patient.identifier.use" title="The purpose of this identifier (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">use</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">usual | official | temp | secondary | old (If known)</a></span>
@@ -3470,7 +3465,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://MyOrg.Jur">MyOrg</a>.  Package myorg.fhir.jurisdiction.laboratory#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 9, 2025 20:41-0500">2025-06-09</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://MyOrg.Jur">MyOrg</a>.  Package myorg.fhir.jurisdiction.laboratory#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 10, 2025 09:08-0500">2025-06-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <div style="color: #333333" >
