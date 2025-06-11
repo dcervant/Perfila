@@ -1,128 +1,121 @@
-<!-- get modelType -->
-
-
-
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<!-- get modelType --><?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Person - MyOrg Jurisdiction Laboratory Report v0.0.1</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Person - Perfilamiento de recursos FHIR para pruebas de CUIDA v0.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link href="fhir.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="fhir.css"/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
 
-    <!-- Project extras -->
-    <link href="assets/css/project.css" rel="stylesheet"/>
-    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
-    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="assets/css/prism.css" rel="stylesheet" />
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
-<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
-<!-- <link href="assets/css/ehdsi.css" rel="stylesheet"/>
- -->
-<link href="assets/css/myOrg.css" rel="stylesheet"/>
-<!-- <link href="assets/css/unicom-productviewer.css" rel="stylesheet"/> -->
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+  <!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+  <!-- <link href="assets/css/ehdsi.css" rel="stylesheet"/> -->
+<link rel="stylesheet" href="assets/css/myOrg.css"/>
+  <!-- <link href="assets/css/unicom-productviewer.css" rel="stylesheet"/> -->
 
-    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    <![endif] -->
 
-    <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"4.6"}
     h3,h4,h5,h6{--heading-prefix:"4.6"}</style>
-    <div id="segment-header" class="segment">  <!-- segment-header -->
-      <div class="container">  <!-- container -->
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
 
-        <!-- Placeholder for child template header declarations -->
+          <!-- Placeholder for child template header declarations -->
 
-<!-- Left logo - typically the publisher's logo - project or affiliate -->
+  <!-- Left logo - typically the publisher's logo - project or affiliate -->
 
-        <!-- THIS IS PROVODED ONlY AS EXAMPLE  -->
+          <!-- THIS IS PROVODED ONlY AS EXAMPLE -->
         <div id="project-nav">
-          <a id="project-logo" no-external="true" href="http://hl7.it">
-            <img height="61" alt="Project home" src="assets/images/logo_right-1.png"/>
-            <img height="61" alt="FHIR website" src="assets/images/logo_right-2.png"/>
+          <a no-external="true" id="project-logo" href="http://hl7.it">
+            <img src="assets/images/logo_right-1.png" alt="Project home" height="61"/>
+            <img src="assets/images/logo_right-2.png" alt="FHIR website" height="61"/>
           </a>
         </div>
 
-<!-- Right logo - for example the FHIR logo -->
-<!-- Make sure you have authorization to use the FHIR logo -->
+  <!-- Right logo - for example the FHIR logo -->
+  <!-- Make sure you have authorization to use the FHIR logo -->
 
        <div id="family-nav">
 
-        <!-- THIS IS PROVODED ONlY AS EXAMPLE  -->
-          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="61" alt="FHIR website" src="assets/images/logo-left.png"/> </a>
+          <!-- THIS IS PROVODED ONlY AS EXAMPLE -->
+          <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/logo-left.png" alt="FHIR website" height="61"/> </a>
           
-          <!-- UNCOMMENT THE FOLLOWING STATEMENT IF YOU ARE ALLLOWED TO USE FHIR -->
-   <!--        <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="61" alt="FHIR website" src="assets/images/fhir-logo-www.png"/> </a> -->
+            <!-- UNCOMMENT THE FOLLOWING STATEMENT IF YOU ARE ALLLOWED TO USE FHIR -->
+     <!-- <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="61" alt="FHIR website" src="assets/images/fhir-logo-www.png"/> </a> -->
 
         </div> 
     
 
-<!-- search icon - if you want -->
-<!--
-        <div id="hl7-search">
+  <!-- search icon - if you want -->
+  <!-- <div id="hl7-search">
           <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
-        </div>
--->
+        </div> -->
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">MyOrg Jurisdiction Laboratory Report</span>
+          <p><span style="font-size:12pt;font-weight:bold">Perfilamiento de recursos FHIR para pruebas de CUIDA</span>
             <br/>
             <span style="display:inline-block;">0.0.1 - ci-build
 
 
 
-  <span title="">150</span>
+  <span title="null">150</span>
 
 
             </span>
           </p>
         </div>
-      </div> <!-- /container -->
-    </div>  <!-- /segment-header -->
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">  <!-- container -->
-        <!-- HEADER CONTENT -->
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-          <!--status-bar-->
+            <!-- status-bar -->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+                <!-- menu.xml -->
 
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+<ul class="nav navbar-nav">
   <li>
     <a href="index.html">Home</a>
   </li>
@@ -138,32 +131,35 @@
   <li>
     <a href="downloads.html">Downloads</a>
   </li>
+  <li><a name="l214">​</a>
+    <a href="visualizadorBundles.html">Visualizador de Bundles</a>
+  </li>
 </ul>
-            </div>  <!-- /.nav-collapse -->
-          </div>  <!-- /.container -->
-        </nav>  <!-- /.navbar -->
-      <!-- /HEADER CONTENT -->
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-navbar -->
-    <!--status-bar-->
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
 
-    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Person</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>Person</b></li>
 
         </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">  <!-- segment-content -->
-      <div class="container">  <!-- container -->
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MyOrg Jurisdiction Laboratory Report - Local Development build (v0.0.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://myorg.jurisdiction/fhir/laboratory/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+    <!-- ReleaseHeader --><p id="publish-box">Perfilamiento de recursos FHIR para pruebas de CUIDA - Local Development build (v0.0.1) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   
 
 
@@ -240,10 +236,10 @@
   <table class="colsd">
 
     <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH"/></span>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH<button data-clipboard-text="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH" title="Click to copy URL" class="btn-copy"></button></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.0.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH|0.0.1"/></span>
+      <span class="copy-text">0.0.1<button data-clipboard-text="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH|0.0.1" title="Click to copy versioned URL" class="btn-copy"></button></span>
       </td>
     </tr>
 
@@ -413,7 +409,7 @@
 
 
 
-<!-- insert intro if present -->
+  <!-- insert intro if present -->
 
 
 
@@ -424,7 +420,7 @@
 </ul>
 
 
-  <!-- no uri -->
+    <!-- no uri -->
   <a name="profile"> </a>
   <h3 id="profile">Formal Views of Profile Content</h3>
   <p>
@@ -442,19 +438,19 @@
         <a href="#tabs-snap">Snapshot Table</a>
       </li>
 
-<!--      <li>
+  <!-- <li>
         <a href="#tabs-xml">Pseudo-XML</a>
-      </li>-->
+      </li> -->
 
 
-<!--      <li>
+  <!-- <li>
         <a href="#tabs-json">Pseudo-JSON</a>
-      </li>-->
+      </li> -->
 
 
-      <!--<li>
+        <!-- <li>
         <a href="#tabs-ttl">Pseudo-TTL</a>
-      </li>-->
+      </li> -->
 
       <li>
         <a href="#tabs-summ">Statistics/References</a>
@@ -1013,7 +1009,7 @@
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">level1 | level2 | level3 | level4<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html" title="http://hl7.org/fhir/ValueSet/identity-assuranceLevel" class="binding">IdentityAssuranceLevel</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // f13188eb-c7c1-4a9f-aae5-16103156aa8f
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2ab2103f-1f26-4d7d-8f2a-3134f8343723
 document.getElementById('cbPersonOHK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PersonOHK'), 'binding', document.getElementById('cbPersonOHK-binding').checked, document.getElementById('ppPersonOHK'));
 document.getElementById('cbPersonOHK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1021,34 +1017,34 @@ filterDesc(document.getElementById('PersonOHK'), 'constraint', document.getEleme
 document.getElementById('cbPersonOHK-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
 filterDesc(document.getElementById('PersonOHK'), 'obligation', document.getElementById('cbPersonOHK-obligation').checked, document.getElementById('ppPersonOHK'));
 </script></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Person.identifier:NationalPersonIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:NationalPersonIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-PeruPersonIdentifiersValueSetOH.html">PeruPersonIdentifiersValueSetOH</a>(a valid code from <a href="CodeSystem-PeruPersonIdentifiersOH.html">Peru Person Identifiers</a>)<div><code>https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH"></button></div><div>From this IG</div></td></tr>
-<tr><td>Person.identifier:PersonMedicalRecordNumber.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:PersonMedicalRecordNumber.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:TributaryIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:TributaryIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:InsuranceIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:InsuranceIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de nombres"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para sistemas de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Género de la persona, utilizado para fines administrativos"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de direcciones"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Tipo de dirección (física, postal)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.country</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de países (ISO 3166 Parte 1 - códigos de 3 letras)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-iso3166-1-3.html">Iso3166-1-3</a><div><code>http://hl7.org/fhir/ValueSet/iso3166-1-3</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/iso3166-1-3"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.link.assurance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html">IdentityAssuranceLevel</a><div><code>http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:NationalPersonIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:NationalPersonIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-PeruPersonIdentifiersValueSetOH.html">PeruPersonIdentifiersValueSetOH</a>(a valid code from <a href="CodeSystem-PeruPersonIdentifiersOH.html">Peru Person Identifiers</a>)<div><code>https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH</code><button data-clipboard-text="https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH" title="Click to copy URL" class="btn-copy"></button></div><div>From this IG</div></td></tr>
+<tr><td>Person.identifier:PersonMedicalRecordNumber.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:PersonMedicalRecordNumber.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:TributaryIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:TributaryIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:InsuranceIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:InsuranceIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de nombres"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para sistemas de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Género de la persona, utilizado para fines administrativos"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de direcciones"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Tipo de dirección (física, postal)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.country</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de países (ISO 3166 Parte 1 - códigos de 3 letras)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-iso3166-1-3.html">Iso3166-1-3</a><div><code>http://hl7.org/fhir/ValueSet/iso3166-1-3</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/iso3166-1-3" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.link.assurance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html">IdentityAssuranceLevel</a><div><code>http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
 </table>
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv-key"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
@@ -1832,7 +1828,7 @@ filterDesc(document.getElementById('PersonOHK'), 'obligation', document.getEleme
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">level1 | level2 | level3 | level4</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html" title="http://hl7.org/fhir/ValueSet/identity-assuranceLevel" class="binding">IdentityAssuranceLevel</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // f13188eb-c7c1-4a9f-aae5-16103156aa8f
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2ab2103f-1f26-4d7d-8f2a-3134f8343723
 document.getElementById('cbPersonOHD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PersonOHD'), 'binding', document.getElementById('cbPersonOHD-binding').checked, document.getElementById('ppPersonOHD'));
 document.getElementById('cbPersonOHD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1841,34 +1837,34 @@ document.getElementById('cbPersonOHD-obligation').checked = 'false' != localStor
 filterDesc(document.getElementById('PersonOHD'), 'obligation', document.getElementById('cbPersonOHD-obligation').checked, document.getElementById('ppPersonOHD'));
 </script></table>
           <a name="tx"> </a>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings (Differential)</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Person.identifier:NationalPersonIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:NationalPersonIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-PeruPersonIdentifiersValueSetOH.html">PeruPersonIdentifiersValueSetOH</a>(a valid code from <a href="CodeSystem-PeruPersonIdentifiersOH.html">Peru Person Identifiers</a>)<div><code>https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH"></button></div><div>From this IG</div></td></tr>
-<tr><td>Person.identifier:PersonMedicalRecordNumber.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:PersonMedicalRecordNumber.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:TributaryIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:TributaryIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:InsuranceIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:InsuranceIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de nombres"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para sistemas de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Género de la persona, utilizado para fines administrativos"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:NationalPersonIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:NationalPersonIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-PeruPersonIdentifiersValueSetOH.html">PeruPersonIdentifiersValueSetOH</a>(a valid code from <a href="CodeSystem-PeruPersonIdentifiersOH.html">Peru Person Identifiers</a>)<div><code>https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH</code><button data-clipboard-text="https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH" title="Click to copy URL" class="btn-copy"></button></div><div>From this IG</div></td></tr>
+<tr><td>Person.identifier:PersonMedicalRecordNumber.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:PersonMedicalRecordNumber.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:TributaryIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:TributaryIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:InsuranceIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:InsuranceIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de nombres"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para sistemas de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Género de la persona, utilizado para fines administrativos"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
 <tr><td>Person.address.extension:Extension-Department<br/>[CanonicalType[https://fhir.onehealth.com.pe/StructureDefinition/Extension-department]]</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de departamentos de Perú"><code></code></td></tr>
 <tr><td>Person.address.extension:Extension-Province<br/>[CanonicalType[https://fhir.onehealth.com.pe/StructureDefinition/Extension-province]]</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de provincias de Perú"><code></code></td></tr>
 <tr><td>Person.address.extension:Extension-District<br/>[CanonicalType[https://fhir.onehealth.com.pe/StructureDefinition/Extension-district]]</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de distritos de Perú"><code></code></td></tr>
-<tr><td>Person.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de direcciones"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Tipo de dirección (física, postal)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.country</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de países (ISO 3166 Parte 1 - códigos de 3 letras)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-iso3166-1-3.html">Iso3166-1-3</a><div><code>http://hl7.org/fhir/ValueSet/iso3166-1-3</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/iso3166-1-3"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.link.assurance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html">IdentityAssuranceLevel</a><div><code>http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de direcciones"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Tipo de dirección (física, postal)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.country</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de países (ISO 3166 Parte 1 - códigos de 3 letras)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-iso3166-1-3.html">Iso3166-1-3</a><div><code>http://hl7.org/fhir/ValueSet/iso3166-1-3</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/iso3166-1-3" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.link.assurance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html">IdentityAssuranceLevel</a><div><code>http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
 </table>
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
         </div>
       </div>
@@ -2433,7 +2429,7 @@ filterDesc(document.getElementById('PersonOHD'), 'obligation', document.getEleme
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">level1 | level2 | level3 | level4<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html" title="http://hl7.org/fhir/ValueSet/identity-assuranceLevel" class="binding">IdentityAssuranceLevel</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // f13188eb-c7c1-4a9f-aae5-16103156aa8f
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2ab2103f-1f26-4d7d-8f2a-3134f8343723
 document.getElementById('cbPersonOHS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PersonOHS'), 'binding', document.getElementById('cbPersonOHS-binding').checked, document.getElementById('ppPersonOHS'));
 document.getElementById('cbPersonOHS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2441,34 +2437,34 @@ filterDesc(document.getElementById('PersonOHS'), 'constraint', document.getEleme
 document.getElementById('cbPersonOHS-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
 filterDesc(document.getElementById('PersonOHS'), 'obligation', document.getElementById('cbPersonOHS-obligation').checked, document.getElementById('ppPersonOHS'));
 </script></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Person.identifier:NationalPersonIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:NationalPersonIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-PeruPersonIdentifiersValueSetOH.html">PeruPersonIdentifiersValueSetOH</a>(a valid code from <a href="CodeSystem-PeruPersonIdentifiersOH.html">Peru Person Identifiers</a>)<div><code>https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH"></button></div><div>From this IG</div></td></tr>
-<tr><td>Person.identifier:PersonMedicalRecordNumber.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:PersonMedicalRecordNumber.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:TributaryIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:TributaryIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:InsuranceIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:InsuranceIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de nombres"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para sistemas de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Género de la persona, utilizado para fines administrativos"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de direcciones"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Tipo de dirección (física, postal)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.country</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de países (ISO 3166 Parte 1 - códigos de 3 letras)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-iso3166-1-3.html">Iso3166-1-3</a><div><code>http://hl7.org/fhir/ValueSet/iso3166-1-3</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/iso3166-1-3"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.link.assurance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html">IdentityAssuranceLevel</a><div><code>http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:NationalPersonIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:NationalPersonIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-PeruPersonIdentifiersValueSetOH.html">PeruPersonIdentifiersValueSetOH</a>(a valid code from <a href="CodeSystem-PeruPersonIdentifiersOH.html">Peru Person Identifiers</a>)<div><code>https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH</code><button data-clipboard-text="https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH" title="Click to copy URL" class="btn-copy"></button></div><div>From this IG</div></td></tr>
+<tr><td>Person.identifier:PersonMedicalRecordNumber.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:PersonMedicalRecordNumber.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:TributaryIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:TributaryIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:InsuranceIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:InsuranceIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de nombres"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para sistemas de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Género de la persona, utilizado para fines administrativos"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de direcciones"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Tipo de dirección (física, postal)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.country</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de países (ISO 3166 Parte 1 - códigos de 3 letras)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-iso3166-1-3.html">Iso3166-1-3</a><div><code>http://hl7.org/fhir/ValueSet/iso3166-1-3</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/iso3166-1-3" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.link.assurance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html">IdentityAssuranceLevel</a><div><code>http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
 </table>
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv-snap"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
@@ -2486,7 +2482,7 @@ filterDesc(document.getElementById('PersonOHS'), 'obligation', document.getEleme
       </div>
     </div>
 
-<!--    <a name="tabs-xml"> </a>
+  <!-- <a name="tabs-xml"> </a>
     <div id="tabs-xml">
       <div id="xml">
         <div id="xml-inner">
@@ -2494,10 +2490,10 @@ filterDesc(document.getElementById('PersonOHS'), 'obligation', document.getEleme
 
         </div>
       </div>
-    </div>-->
+    </div> -->
 
 
-<!--    <a name="tabs-json"> </a>
+  <!-- <a name="tabs-json"> </a>
     <div id="tabs-json">
       <div id="json">
         <div id="json-inner">
@@ -2528,7 +2524,7 @@ filterDesc(document.getElementById('PersonOHS'), 'obligation', document.getEleme
           "<a href="StructureDefinition-PersonOH.html#Person.identifier.period.start" title="Fecha de expedición de la identificación" class="dict"><span style="text-decoration: underline">start</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Fecha de expedición</span>
           "<a href="StructureDefinition-PersonOH.html#Person.identifier.period.end" title="Fecha de vencimiento de la identificación" class="dict"><span style="text-decoration: underline">end</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>&gt;" <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Fecha de vencimiento</span>
         },
-        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora de la identificación</span>
+        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora de la identificación</span>
       },
       { // <span style="color: navy; opacity: 0.8">Número de persona en historia clínica (si aplica)</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span>
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.use" title="The purpose of this identifier (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">use</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">usual | official | temp | secondary | old (If known)</a></span>
@@ -2541,7 +2537,7 @@ filterDesc(document.getElementById('PersonOHS'), 'obligation', document.getEleme
         },
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.system" title="Sistema de Información de Historia Clínica que asignó el identificador" class="dict"><span style="text-decoration: underline">system</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Sistema que asigna el identificador con el patrón https://fhir.onehealth.com.pe/organizacion/sistema</span>
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.value" title="Número de persona en historia clínica" class="dict"><span style="text-decoration: underline">value</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Número de Persona en historia clínica</span>
-        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier (this element must be supported)" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora del número de persona en historia clínica</span>
+        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier (this element must be supported)" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora del número de persona en historia clínica</span>
       },
       { // <span style="color: navy; opacity: 0.8">Número de RUC de la persona emitido por SUNAT</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span>
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.use" title="The purpose of this identifier (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">use</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">usual | official | temp | secondary | old (If known)</a></span>
@@ -2554,7 +2550,7 @@ filterDesc(document.getElementById('PersonOHS'), 'obligation', document.getEleme
         },
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.system" title="Sistema que asigna el identificador" class="dict"><span style="text-decoration: underline">system</span></a>" : "https://fhir.onehealth.com.pe/sunat", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span>
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.value" title="Número de identificación tributaria de la persona" class="dict"><span style="text-decoration: underline">value</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Número de identificación tributaria de la persona</span>
-        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier (this element must be supported)" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora del identificador</span>
+        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier (this element must be supported)" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora del identificador</span>
       },
       { // <span style="color: navy; opacity: 0.8">Identificador emitido por aseguradora</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span>
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.use" title="The purpose of this identifier (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">use</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">usual | official | temp | secondary | old (If known)</a></span>
@@ -2567,7 +2563,7 @@ filterDesc(document.getElementById('PersonOHS'), 'obligation', document.getEleme
         },
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.system" title="Establishes the namespace for the value - that is, a URL that describes a set values that are unique" class="dict"><span style="text-decoration: underline">system</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Sistema de identificación con el patrón https://fhir.onehealth.com.pe/aseguradora</span>
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.value" title="Número de identificación tributaria de la persona" class="dict"><span style="text-decoration: underline">value</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Número de identificación tributaria de la persona</span>
-        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier (this element must be supported)" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora del identificador</span>
+        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier (this element must be supported)" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora del identificador</span>
       }
     ],
     "<a href="StructureDefinition-PersonOH.html#Person.name" title="A name associated with the person (this element must be supported)" class="dict"><span style="text-decoration: underline">name</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Nombre de la persona</span>
@@ -2656,20 +2652,20 @@ filterDesc(document.getElementById('PersonOHS'), 'obligation', document.getEleme
       "<a href="StructureDefinition-PersonOH.html#Person.address.postalCode" title="A postal code designating a region defined by the postal service" class="dict"><span style="text-decoration: underline">postalCode</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Código postal de la dirección</span>
       "<a href="StructureDefinition-PersonOH.html#Person.address.country" title="Country - a nation as commonly understood or generally accepted" class="dict"><span style="text-decoration: underline">country</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">País de la dirección en formato ISO 3166 - código de 3 letras</a></span>
     }],
-    "<a href="StructureDefinition-PersonOH.html#Person.managingOrganization" title="The organization that is the custodian of the person record (this element must be supported)" class="dict"><span style="text-decoration: underline">managingOrganization</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Organización que administra la información de la persona</span>
+    "<a href="StructureDefinition-PersonOH.html#Person.managingOrganization" title="The organization that is the custodian of the person record (this element must be supported)" class="dict"><span style="text-decoration: underline">managingOrganization</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Organización que administra la información de la persona</span>
     "<a href="StructureDefinition-PersonOH.html#Person.active" title="Whether this person's record is in active use (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">active</span></a>" : &lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Indica si la persona está activa en el sistema</span>
     "<a href="StructureDefinition-PersonOH.html#Person.link" title="Link to a resource that concerns the same actual person (this element must be supported)" class="dict"><span style="text-decoration: underline">link</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Enlaces a otros recursos que se refieren a la persona</span>
-      "<a href="StructureDefinition-PersonOH.html#Person.link.target" title="The resource to which this actual person is associated" class="dict"><span style="text-decoration: underline">target</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PatientOH], CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH], CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PractitionerOH], CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/RelatedPersonOH]])}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Recurso relacionado a la persona</span>
+      "<a href="StructureDefinition-PersonOH.html#Person.link.target" title="The resource to which this actual person is associated" class="dict"><span style="text-decoration: underline">target</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PatientOH], CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH], CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PractitionerOH], CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/RelatedPersonOH]])}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Recurso relacionado a la persona</span>
       "<a href="StructureDefinition-PersonOH.html#Person.link.assurance" title="Level of assurance that this link is associated with the target resource" class="dict"><span style="text-decoration: underline">assurance</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">level1 | level2 | level3 | level4</a></span>
     }],
   }
 
         </div>
       </div>
-    </div>-->
+    </div> -->
 
 
-    <!--<a name="tabs-ttl"> </a>
+      <!-- <a name="tabs-ttl"> </a>
     <div id="tabs-ttl">
       <div id="ttl">
         <div id="ttl-inner">
@@ -2677,7 +2673,7 @@ filterDesc(document.getElementById('PersonOHS'), 'obligation', document.getEleme
 
         </div>
       </div>
-    </div>-->
+    </div> -->
 
     <a name="tabs-summ"> </a>
     <div id="tabs-summ">
@@ -2693,11 +2689,11 @@ Summary
 <p>Mandatory: 19 elements(33 nested mandatory elements)<br/> Must-Support: 26 elements<br/> Fixed: 13 elements<br/> Prohibited: 57 elements</p><p><b>Structures</b></p>
 <p>This structure refers to these other structures:</p>
 <ul>
-<li><a href="StructureDefinition-OrganizationOH.html">OneHealth Organization <span style="font-size: 8px">(http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH)</span></a></li>
-<li><a href="StructureDefinition-PatientOH.html">Patient <span style="font-size: 8px">(http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PatientOH)</span></a></li>
-<li><a href="StructureDefinition-PersonOH.html">Person <span style="font-size: 8px">(http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH)</span></a></li>
-<li><a href="StructureDefinition-PractitionerOH.html">OneHealth Practitioner <span style="font-size: 8px">(http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PractitionerOH)</span></a></li>
-<li><a href="StructureDefinition-RelatedPersonOH.html">OneHealth RelatedPerson <span style="font-size: 8px">(http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/RelatedPersonOH)</span></a></li>
+<li><a href="StructureDefinition-OrganizationOH.html">OneHealth Organization <span style="font-size: 8px">(http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH)</span></a></li>
+<li><a href="StructureDefinition-PatientOH.html">Patient <span style="font-size: 8px">(http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PatientOH)</span></a></li>
+<li><a href="StructureDefinition-PersonOH.html">Person <span style="font-size: 8px">(http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH)</span></a></li>
+<li><a href="StructureDefinition-PractitionerOH.html">OneHealth Practitioner <span style="font-size: 8px">(http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PractitionerOH)</span></a></li>
+<li><a href="StructureDefinition-RelatedPersonOH.html">OneHealth RelatedPerson <span style="font-size: 8px">(http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/RelatedPersonOH)</span></a></li>
 
 </ul>
 
@@ -3286,7 +3282,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">level1 | level2 | level3 | level4<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html" title="http://hl7.org/fhir/ValueSet/identity-assuranceLevel" class="binding">IdentityAssuranceLevel</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // f13188eb-c7c1-4a9f-aae5-16103156aa8f
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2ab2103f-1f26-4d7d-8f2a-3134f8343723
 document.getElementById('cbPersonOHKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PersonOHKA'), 'binding', document.getElementById('cbPersonOHKA-binding').checked, document.getElementById('ppPersonOHKA'));
 document.getElementById('cbPersonOHKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3294,34 +3290,34 @@ filterDesc(document.getElementById('PersonOHKA'), 'constraint', document.getElem
 document.getElementById('cbPersonOHKA-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
 filterDesc(document.getElementById('PersonOHKA'), 'obligation', document.getElementById('cbPersonOHKA-obligation').checked, document.getElementById('ppPersonOHKA'));
 </script></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Person.identifier:NationalPersonIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:NationalPersonIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-PeruPersonIdentifiersValueSetOH.html">PeruPersonIdentifiersValueSetOH</a>(a valid code from <a href="CodeSystem-PeruPersonIdentifiersOH.html">Peru Person Identifiers</a>)<div><code>https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH"></button></div><div>From this IG</div></td></tr>
-<tr><td>Person.identifier:PersonMedicalRecordNumber.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:PersonMedicalRecordNumber.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:TributaryIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:TributaryIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:InsuranceIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:InsuranceIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de nombres"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para sistemas de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Género de la persona, utilizado para fines administrativos"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de direcciones"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Tipo de dirección (física, postal)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.country</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de países (ISO 3166 Parte 1 - códigos de 3 letras)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-iso3166-1-3.html">Iso3166-1-3</a><div><code>http://hl7.org/fhir/ValueSet/iso3166-1-3</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/iso3166-1-3"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.link.assurance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html">IdentityAssuranceLevel</a><div><code>http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:NationalPersonIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:NationalPersonIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-PeruPersonIdentifiersValueSetOH.html">PeruPersonIdentifiersValueSetOH</a>(a valid code from <a href="CodeSystem-PeruPersonIdentifiersOH.html">Peru Person Identifiers</a>)<div><code>https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH</code><button data-clipboard-text="https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH" title="Click to copy URL" class="btn-copy"></button></div><div>From this IG</div></td></tr>
+<tr><td>Person.identifier:PersonMedicalRecordNumber.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:PersonMedicalRecordNumber.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:TributaryIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:TributaryIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:InsuranceIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:InsuranceIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de nombres"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para sistemas de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Género de la persona, utilizado para fines administrativos"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de direcciones"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Tipo de dirección (física, postal)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.country</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de países (ISO 3166 Parte 1 - códigos de 3 letras)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-iso3166-1-3.html">Iso3166-1-3</a><div><code>http://hl7.org/fhir/ValueSet/iso3166-1-3</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/iso3166-1-3" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.link.assurance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html">IdentityAssuranceLevel</a><div><code>http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
 </table>
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv-all-key"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
@@ -4105,7 +4101,7 @@ filterDesc(document.getElementById('PersonOHKA'), 'obligation', document.getElem
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">level1 | level2 | level3 | level4</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html" title="http://hl7.org/fhir/ValueSet/identity-assuranceLevel" class="binding">IdentityAssuranceLevel</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // f13188eb-c7c1-4a9f-aae5-16103156aa8f
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2ab2103f-1f26-4d7d-8f2a-3134f8343723
 document.getElementById('cbPersonOHDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PersonOHDA'), 'binding', document.getElementById('cbPersonOHDA-binding').checked, document.getElementById('ppPersonOHDA'));
 document.getElementById('cbPersonOHDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4113,34 +4109,34 @@ filterDesc(document.getElementById('PersonOHDA'), 'constraint', document.getElem
 document.getElementById('cbPersonOHDA-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
 filterDesc(document.getElementById('PersonOHDA'), 'obligation', document.getElementById('cbPersonOHDA-obligation').checked, document.getElementById('ppPersonOHDA'));
 </script></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings (Differential)</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Person.identifier:NationalPersonIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:NationalPersonIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-PeruPersonIdentifiersValueSetOH.html">PeruPersonIdentifiersValueSetOH</a>(a valid code from <a href="CodeSystem-PeruPersonIdentifiersOH.html">Peru Person Identifiers</a>)<div><code>https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH"></button></div><div>From this IG</div></td></tr>
-<tr><td>Person.identifier:PersonMedicalRecordNumber.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:PersonMedicalRecordNumber.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:TributaryIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:TributaryIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:InsuranceIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:InsuranceIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de nombres"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para sistemas de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Género de la persona, utilizado para fines administrativos"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:NationalPersonIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:NationalPersonIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-PeruPersonIdentifiersValueSetOH.html">PeruPersonIdentifiersValueSetOH</a>(a valid code from <a href="CodeSystem-PeruPersonIdentifiersOH.html">Peru Person Identifiers</a>)<div><code>https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH</code><button data-clipboard-text="https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH" title="Click to copy URL" class="btn-copy"></button></div><div>From this IG</div></td></tr>
+<tr><td>Person.identifier:PersonMedicalRecordNumber.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:PersonMedicalRecordNumber.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:TributaryIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:TributaryIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:InsuranceIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:InsuranceIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de nombres"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para sistemas de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Género de la persona, utilizado para fines administrativos"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
 <tr><td>Person.address.extension:Extension-Department<br/>[CanonicalType[https://fhir.onehealth.com.pe/StructureDefinition/Extension-department]]</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de departamentos de Perú"><code></code></td></tr>
 <tr><td>Person.address.extension:Extension-Province<br/>[CanonicalType[https://fhir.onehealth.com.pe/StructureDefinition/Extension-province]]</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de provincias de Perú"><code></code></td></tr>
 <tr><td>Person.address.extension:Extension-District<br/>[CanonicalType[https://fhir.onehealth.com.pe/StructureDefinition/Extension-district]]</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de distritos de Perú"><code></code></td></tr>
-<tr><td>Person.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de direcciones"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Tipo de dirección (física, postal)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.country</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de países (ISO 3166 Parte 1 - códigos de 3 letras)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-iso3166-1-3.html">Iso3166-1-3</a><div><code>http://hl7.org/fhir/ValueSet/iso3166-1-3</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/iso3166-1-3"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.link.assurance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html">IdentityAssuranceLevel</a><div><code>http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de direcciones"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Tipo de dirección (física, postal)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.country</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de países (ISO 3166 Parte 1 - códigos de 3 letras)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-iso3166-1-3.html">Iso3166-1-3</a><div><code>http://hl7.org/fhir/ValueSet/iso3166-1-3</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/iso3166-1-3" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.link.assurance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html">IdentityAssuranceLevel</a><div><code>http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
 </table>
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
         </div>
       </div>
@@ -4705,7 +4701,7 @@ filterDesc(document.getElementById('PersonOHDA'), 'obligation', document.getElem
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">level1 | level2 | level3 | level4<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html" title="http://hl7.org/fhir/ValueSet/identity-assuranceLevel" class="binding">IdentityAssuranceLevel</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // f13188eb-c7c1-4a9f-aae5-16103156aa8f
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2ab2103f-1f26-4d7d-8f2a-3134f8343723
 document.getElementById('cbPersonOHSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PersonOHSA'), 'binding', document.getElementById('cbPersonOHSA-binding').checked, document.getElementById('ppPersonOHSA'));
 document.getElementById('cbPersonOHSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4713,34 +4709,34 @@ filterDesc(document.getElementById('PersonOHSA'), 'constraint', document.getElem
 document.getElementById('cbPersonOHSA-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
 filterDesc(document.getElementById('PersonOHSA'), 'obligation', document.getElementById('cbPersonOHSA-obligation').checked, document.getElementById('ppPersonOHSA'));
 </script></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Person.identifier:NationalPersonIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:NationalPersonIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-PeruPersonIdentifiersValueSetOH.html">PeruPersonIdentifiersValueSetOH</a>(a valid code from <a href="CodeSystem-PeruPersonIdentifiersOH.html">Peru Person Identifiers</a>)<div><code>https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH"></button></div><div>From this IG</div></td></tr>
-<tr><td>Person.identifier:PersonMedicalRecordNumber.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:PersonMedicalRecordNumber.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:TributaryIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:TributaryIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:InsuranceIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.identifier:InsuranceIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de nombres"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para sistemas de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Género de la persona, utilizado para fines administrativos"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de direcciones"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Tipo de dirección (física, postal)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.address.country</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de países (ISO 3166 Parte 1 - códigos de 3 letras)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-iso3166-1-3.html">Iso3166-1-3</a><div><code>http://hl7.org/fhir/ValueSet/iso3166-1-3</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/iso3166-1-3"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Person.link.assurance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html">IdentityAssuranceLevel</a><div><code>http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:NationalPersonIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:NationalPersonIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-PeruPersonIdentifiersValueSetOH.html">PeruPersonIdentifiersValueSetOH</a>(a valid code from <a href="CodeSystem-PeruPersonIdentifiersOH.html">Peru Person Identifiers</a>)<div><code>https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH</code><button data-clipboard-text="https://fhir.onehealth.com.pe/ValueSet/PeruPersonIdentifiersValueSetOH" title="Click to copy URL" class="btn-copy"></button></div><div>From this IG</div></td></tr>
+<tr><td>Person.identifier:PersonMedicalRecordNumber.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:PersonMedicalRecordNumber.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:TributaryIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:TributaryIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:InsuranceIdentifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de identificadores">Pattern Value: official<div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.identifier:InsuranceIdentifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Códigos para tipo de identificadores"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de nombres"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.telecom.system</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para sistemas de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.telecom.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de contacto"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a><div><code>http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Género de la persona, utilizado para fines administrativos"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos para uso de direcciones"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a><div><code>http://hl7.org/fhir/ValueSet/address-use|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-use|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Tipo de dirección (física, postal)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a><div><code>http://hl7.org/fhir/ValueSet/address-type|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/address-type|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.address.country</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Códigos de países (ISO 3166 Parte 1 - códigos de 3 letras)"><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-iso3166-1-3.html">Iso3166-1-3</a><div><code>http://hl7.org/fhir/ValueSet/iso3166-1-3</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/iso3166-1-3" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>Person.link.assurance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html">IdentityAssuranceLevel</a><div><code>http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.1" title="Click to copy URL" class="btn-copy"></button></div><div>From the FHIR Standard</div></td></tr>
 </table>
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv-all-snap"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
@@ -4757,7 +4753,7 @@ filterDesc(document.getElementById('PersonOHSA'), 'obligation', document.getElem
         </div>
       </div>
 
-      <!--<div id="all-xml">
+        <!-- <div id="all-xml">
         <p>
           <b>XML Template</b>
         </p>
@@ -4765,10 +4761,10 @@ filterDesc(document.getElementById('PersonOHSA'), 'obligation', document.getElem
           <p><span style="color: maroon; font-weight: bold">yet to be done: Xml template</span></p>
 
         </div>
-      </div>-->
+      </div> -->
 
 
-      <!--<div id="all-json">
+        <!-- <div id="all-json">
         <p>
           <b>JSON Template</b>
         </p>
@@ -4800,7 +4796,7 @@ filterDesc(document.getElementById('PersonOHSA'), 'obligation', document.getElem
           "<a href="StructureDefinition-PersonOH.html#Person.identifier.period.start" title="Fecha de expedición de la identificación" class="dict"><span style="text-decoration: underline">start</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Fecha de expedición</span>
           "<a href="StructureDefinition-PersonOH.html#Person.identifier.period.end" title="Fecha de vencimiento de la identificación" class="dict"><span style="text-decoration: underline">end</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>&gt;" <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Fecha de vencimiento</span>
         },
-        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora de la identificación</span>
+        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora de la identificación</span>
       },
       { // <span style="color: navy; opacity: 0.8">Número de persona en historia clínica (si aplica)</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span>
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.use" title="The purpose of this identifier (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">use</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">usual | official | temp | secondary | old (If known)</a></span>
@@ -4813,7 +4809,7 @@ filterDesc(document.getElementById('PersonOHSA'), 'obligation', document.getElem
         },
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.system" title="Sistema de Información de Historia Clínica que asignó el identificador" class="dict"><span style="text-decoration: underline">system</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Sistema que asigna el identificador con el patrón https://fhir.onehealth.com.pe/organizacion/sistema</span>
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.value" title="Número de persona en historia clínica" class="dict"><span style="text-decoration: underline">value</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Número de Persona en historia clínica</span>
-        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier (this element must be supported)" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora del número de persona en historia clínica</span>
+        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier (this element must be supported)" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora del número de persona en historia clínica</span>
       },
       { // <span style="color: navy; opacity: 0.8">Número de RUC de la persona emitido por SUNAT</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span>
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.use" title="The purpose of this identifier (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">use</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">usual | official | temp | secondary | old (If known)</a></span>
@@ -4826,7 +4822,7 @@ filterDesc(document.getElementById('PersonOHSA'), 'obligation', document.getElem
         },
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.system" title="Sistema que asigna el identificador" class="dict"><span style="text-decoration: underline">system</span></a>" : "https://fhir.onehealth.com.pe/sunat", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span>
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.value" title="Número de identificación tributaria de la persona" class="dict"><span style="text-decoration: underline">value</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Número de identificación tributaria de la persona</span>
-        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier (this element must be supported)" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora del identificador</span>
+        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier (this element must be supported)" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora del identificador</span>
       },
       { // <span style="color: navy; opacity: 0.8">Identificador emitido por aseguradora</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span>
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.use" title="The purpose of this identifier (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">use</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">usual | official | temp | secondary | old (If known)</a></span>
@@ -4839,7 +4835,7 @@ filterDesc(document.getElementById('PersonOHSA'), 'obligation', document.getElem
         },
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.system" title="Establishes the namespace for the value - that is, a URL that describes a set values that are unique" class="dict"><span style="text-decoration: underline">system</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Sistema de identificación con el patrón https://fhir.onehealth.com.pe/aseguradora</span>
         "<a href="StructureDefinition-PersonOH.html#Person.identifier.value" title="Número de identificación tributaria de la persona" class="dict"><span style="text-decoration: underline">value</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Número de identificación tributaria de la persona</span>
-        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier (this element must be supported)" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora del identificador</span>
+        "<a href="StructureDefinition-PersonOH.html#Person.identifier.assigner" title="Organization that issued/manages the identifier (this element must be supported)" class="dict"><span style="text-decoration: underline">assigner</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Entidad emisora del identificador</span>
       }
     ],
     "<a href="StructureDefinition-PersonOH.html#Person.name" title="A name associated with the person (this element must be supported)" class="dict"><span style="text-decoration: underline">name</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Nombre de la persona</span>
@@ -4928,19 +4924,19 @@ filterDesc(document.getElementById('PersonOHSA'), 'obligation', document.getElem
       "<a href="StructureDefinition-PersonOH.html#Person.address.postalCode" title="A postal code designating a region defined by the postal service" class="dict"><span style="text-decoration: underline">postalCode</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Código postal de la dirección</span>
       "<a href="StructureDefinition-PersonOH.html#Person.address.country" title="Country - a nation as commonly understood or generally accepted" class="dict"><span style="text-decoration: underline">country</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">País de la dirección en formato ISO 3166 - código de 3 letras</a></span>
     }],
-    "<a href="StructureDefinition-PersonOH.html#Person.managingOrganization" title="The organization that is the custodian of the person record (this element must be supported)" class="dict"><span style="text-decoration: underline">managingOrganization</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Organización que administra la información de la persona</span>
+    "<a href="StructureDefinition-PersonOH.html#Person.managingOrganization" title="The organization that is the custodian of the person record (this element must be supported)" class="dict"><span style="text-decoration: underline">managingOrganization</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH]])}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Organización que administra la información de la persona</span>
     "<a href="StructureDefinition-PersonOH.html#Person.active" title="Whether this person's record is in active use (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">active</span></a>" : &lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Indica si la persona está activa en el sistema</span>
     "<a href="StructureDefinition-PersonOH.html#Person.link" title="Link to a resource that concerns the same actual person (this element must be supported)" class="dict"><span style="text-decoration: underline">link</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Enlaces a otros recursos que se refieren a la persona</span>
-      "<a href="StructureDefinition-PersonOH.html#Person.link.target" title="The resource to which this actual person is associated" class="dict"><span style="text-decoration: underline">target</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PatientOH], CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH], CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PractitionerOH], CanonicalType[http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/RelatedPersonOH]])}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Recurso relacionado a la persona</span>
+      "<a href="StructureDefinition-PersonOH.html#Person.link.target" title="The resource to which this actual person is associated" class="dict"><span style="text-decoration: underline">target</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PatientOH], CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH], CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PractitionerOH], CanonicalType[http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/RelatedPersonOH]])}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Recurso relacionado a la persona</span>
       "<a href="StructureDefinition-PersonOH.html#Person.link.assurance" title="Level of assurance that this link is associated with the target resource" class="dict"><span style="text-decoration: underline">assurance</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">level1 | level2 | level3 | level4</a></span>
     }],
   }
 
         </div>
-      </div>-->
+      </div> -->
 
 
-      <!--<div id="all-ttl">
+        <!-- <div id="all-ttl">
         <p>
           <b>TTL Template</b>
         </p>
@@ -4948,7 +4944,7 @@ filterDesc(document.getElementById('PersonOHSA'), 'obligation', document.getElem
           <p><span style="color: maroon; font-weight: bold">yet to be done: Turtle template</span></p>
 
         </div>
-      </div>-->
+      </div> -->
 
       <div id="all-summ">
         <p>This structure is derived from <a href="http://hl7.org/fhir/R4/person.html">Person</a>
@@ -4961,11 +4957,11 @@ Summary
 <p>Mandatory: 19 elements(33 nested mandatory elements)<br/> Must-Support: 26 elements<br/> Fixed: 13 elements<br/> Prohibited: 57 elements</p><p><b>Structures</b></p>
 <p>This structure refers to these other structures:</p>
 <ul>
-<li><a href="StructureDefinition-OrganizationOH.html">OneHealth Organization <span style="font-size: 8px">(http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH)</span></a></li>
-<li><a href="StructureDefinition-PatientOH.html">Patient <span style="font-size: 8px">(http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PatientOH)</span></a></li>
-<li><a href="StructureDefinition-PersonOH.html">Person <span style="font-size: 8px">(http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH)</span></a></li>
-<li><a href="StructureDefinition-PractitionerOH.html">OneHealth Practitioner <span style="font-size: 8px">(http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/PractitionerOH)</span></a></li>
-<li><a href="StructureDefinition-RelatedPersonOH.html">OneHealth RelatedPerson <span style="font-size: 8px">(http://myorg.jurisdiction/fhir/laboratory/StructureDefinition/RelatedPersonOH)</span></a></li>
+<li><a href="StructureDefinition-OrganizationOH.html">OneHealth Organization <span style="font-size: 8px">(http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/OrganizationOH)</span></a></li>
+<li><a href="StructureDefinition-PatientOH.html">Patient <span style="font-size: 8px">(http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PatientOH)</span></a></li>
+<li><a href="StructureDefinition-PersonOH.html">Person <span style="font-size: 8px">(http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH)</span></a></li>
+<li><a href="StructureDefinition-PractitionerOH.html">OneHealth Practitioner <span style="font-size: 8px">(http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PractitionerOH)</span></a></li>
+<li><a href="StructureDefinition-RelatedPersonOH.html">OneHealth RelatedPerson <span style="font-size: 8px">(http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/RelatedPersonOH)</span></a></li>
 
 </ul>
 
@@ -5002,60 +4998,54 @@ Summary
       </div>
     </div>
   </div>
-  <p>&#160;</p>
+  <p>&nbsp;</p>
   <p>Other representations of profile: <a href="StructureDefinition-PersonOH.csv">CSV</a>, <a href="StructureDefinition-PersonOH.xlsx">Excel</a>, <a href="StructureDefinition-PersonOH.sch">Schematron</a>
  
   </p>
 
   
 
-<!-- insert notes if present -->
+  <!-- insert notes if present -->
 
 
 
 
 </div>
 
-        </div>  <!-- /inner-wrapper -->
-      </div>  <!-- /row -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-content -->
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
 
-  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
 
-  <script type="text/javascript" src="assets/js/tabs.js"> </script>
+  <script src="assets/js/tabs.js" type="text/javascript"> </script>
 
-  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
-  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container">  <!-- container -->
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://MyOrg.Jur">MyOrg</a>.  Package myorg.fhir.jurisdiction.laboratory#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jun 11, 2025 09:50-0500">2025-06-11</span>
+          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://cuida.pruebas.dherly.Jur">CUIDA</a>.  Package cuida.pruebas.dherly#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jun 11, 2025 15:07-0500">2025-06-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
-            <div style="color: #333333" >
+            <div style="color: #333333">
 
           Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
                  <a style="color: #81BEF7" href="qa.html">QA Report</a> 
 				 
-<!--
-                 <a style="color: #81BEF7" target="_blank" href="http://myorg.jurisdiction/fhir/laboratory/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
--->
+  <!-- <a style="color: #81BEF7" target="_blank" href="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> | -->
 
-                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
-<!--
-                 <a style="color: #81BEF7" target="_blank" href="mailto:mail@hl7belgium.org">Propose a change<img alt="external" style="vertical-align: baseline" src="external.png"/></a>
--->
+                 <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/R4/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+                   <!-- <a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+  <!-- <a style="color: #81BEF7" target="_blank" href="mailto:mail@hl7belgium.org">Propose a change<img alt="external" style="vertical-align: baseline" src="external.png"/></a> -->
 
-<!--				 
-<br/>				 
-				 <a style="color: #81BEF7" rel="eufunded" href="https://europa.eu"><img style="border-style: none;" alt="EU" src="assets/images/en_horizontal_cef_logo.png" width="250"/></a>
-	-->			  
-<!-- <div id=container width=100% style="display:block;" >
+  <!-- <br/>				 
+				 <a style="color: #81BEF7" rel="eufunded" href="https://europa.eu"><img style="border-style: none;" alt="EU" src="assets/images/en_horizontal_cef_logo.png" width="250"/></a> -->			  
+  <!-- <div id=container width=100% style="display:block;" >
 <div style="float: left; padding-top: 17px; padding-bottom: 17px;" >The UNICOM Innovation Action has received funding from the European Union's Horizon 2020
   <br/>research and innovation programme under grant agreement No. 875299.
 </div>
@@ -5067,27 +5057,26 @@ Summary
 </div>
           </span>
         </p>
-      </div>  <!-- /inner-wrapper -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-footer -->
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
-    <div class="container">  <!-- container -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
 
-  <!-- JS and analytics only. -->
-  <!-- Bootstrap core JavaScript
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  <!-- Analytics Below
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
-
