@@ -1,0 +1,673 @@
+/* --- Variables CSS --- */
+:root {
+    --primary-color: #0056b3; /* Azul oscuro */
+    --secondary-color: #4a90e2; /* Azul claro */
+    --accent-color: #f5a623; /* Naranja */
+    --background-color: #f4f7f6;
+    --text-color: #333;
+    --panel-bg: #ffffff;
+    --border-color: #ddd;
+    --error-color: #d9534f;
+    --success-color: #5cb85c;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --header-height: 50px;
+    --panel-width: 300px;
+    --panel-padding: 15px;
+    --border-radius: 5px;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+/* --- Reset Básico y Estilos Globales --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden; /* Evita scrollbars en body */
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+/* --- Layout Principal --- */
+.app-header {
+    height: var(--header-height);
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: var(--box-shadow);
+    z-index: 1000; /* Asegura que esté sobre los paneles */
+}
+
+.app-header .logo img {
+    vertical-align: middle;
+}
+
+.app-header h1 {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.main-container {
+    height: calc(100% - var(--header-height));
+    position: relative; /* Para posicionar elementos hijos absolutos/fijos */
+    display: flex; /* Aunque el network ocupe todo, flex es útil */
+}
+
+#network-container {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Para el mensaje de carga */
+    background-color: #e9ecef; /* Un fondo ligeramente distinto */
+}
+
+#loading-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #6c757d;
+    font-size: 1.2em;
+}
+
+/* --- Paneles Laterales Flotantes --- */
+.panel-trigger {
+    position: fixed;
+    top: calc(var(--header-height) + 20px);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 1001; /* Encima del grafo, debajo de modales */
+    border-radius: 0 var(--border-radius) var(--border-radius) 0; /* Redondeado en el lado visible */
+    transition: background-color var(--transition-speed);
+    font-size: 1.1em;
+}
+.panel-trigger:hover {
+    background-color: var(--secondary-color);
+}
+.panel-trigger.left-trigger {
+    left: 0;
+}
+/* No hacer que el trigger se superponga con el panel que activa */
+/* El panel tendrá su propio margen o el trigger se posicionará fuera */
+
+.side-panel {
+    position: fixed;
+    top: var(--header-height);
+    height: calc(100% - var(--header-height));
+    width: var(--panel-width);
+    background-color: var(--panel-bg);
+    box-shadow: var(--box-shadow);
+    z-index: 1002; /* Encima del grafo y triggers */
+    padding: var(--panel-padding);
+    overflow-y: auto;
+    transition: transform var(--transition-speed) ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-panel.left-panel {
+    left: 0;
+    transform: translateX(-100%); /* Oculto por defecto */
+    border-right: 1px solid var(--border-color);
+}
+.side-panel.right-panel {
+    right: 0;
+    transform: translateX(100%); /* Oculto por defecto */
+    border-left: 1px solid var(--border-color);
+}
+
+/* Clase para mostrar los paneles */
+.side-panel.visible {
+    transform: translateX(0);
+}
+
+/* Estilo para evitar que el trigger se vea cuando el panel está abierto */
+/* Esto puede ser complejo, una alternativa es simplemente mover el trigger */
+/* #control-panel.visible + #control-panel-trigger {
+    display: none; /* O moverlo: left: var(--panel-width); */
+/*} */
+
+.side-panel h3, .panel-header h3 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-close-button {
+    margin-left: auto; /* Empuja el botón a la derecha en el header del panel */
+    padding: 3px 8px !important; /* Botón X más pequeño */
+    line-height: 1;
+}
+
+/* --- Controles en Panel Izquierdo --- */
+.control-group {
+    margin-bottom: 20px;
+}
+.control-group h4 {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: var(--secondary-color);
+}
+.control-group label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.control-group input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.control-group input[type="range"] {
+    width: calc(100% - 50px); /* Ajusta según el span */
+    vertical-align: middle;
+}
+#font-size-value {
+    display: inline-block;
+    min-width: 40px;
+    text-align: right;
+    vertical-align: middle;
+}
+.control-group select {
+    width: calc(100% - 40px); /* Ajusta según el botón X */
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+.file-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre botones */
+}
+#file-name {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-style: italic;
+    color: #666;
+    margin: 0 5px;
+}
+
+.focus-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.clear-button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+.clear-button:hover {
+    background-color: #5a6268;
+}
+
+
+/* --- Panel de Detalles (Derecha) --- */
+#details-content p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+#details-content strong {
+    color: var(--primary-color);
+}
+#details-content h4 {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: var(--secondary-color);
+}
+
+.details-subheader {
+    display: flex;                /* Activar Flexbox */
+    justify-content: space-between; /* Empuja h4 a la izquierda, botón a la derecha */
+    align-items: center;          /* Centra verticalmente */
+    margin-bottom: 8px;           /* Espacio debajo de esta línea, antes del <pre> */
+}
+
+/*#details-json {
+    background-color: #e9ecef;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    /*max-height: 400px;  Limita altura del JSON * /
+    max-height: 100%;
+    overflow: auto;
+    white-space: pre; /* Permite el ajuste de línea * /
+    word-wrap: break-word; /* Rompe palabras largas * /
+    /* font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; * /
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8em;
+    line-height: 1.6; /* Ajusta este valor (e.g., 1.4, 1.6) si es necesario * /
+    margin: 0; /* Asegurar que no haya márgenes extraños * /
+}
+#details-json code {
+    display: block;      /* Tratar el contenido como un bloque * /
+    line-height: inherit; /* Heredar explícitamente el line-height del <pre> * /
+    padding: 0;         /* Asegurar que no haya padding interno en code * /
+    margin: 0;          /* Asegurar que no haya margen interno en code * /
+}*/
+
+#details-json-container {
+    background-color: #e9ecef;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 10px;        /* Padding en el contenedor */
+    max-height: 400px;    /* Altura máxima */
+    overflow: auto;       /* Scroll si se desborda */
+    white-space: pre-wrap;/* Preservar espacios/saltos Y ajustar línea */
+    word-wrap: break-word;/* Romper palabras largas si es necesario */
+    line-height: 1.5;     /* Aplicar altura de línea aquí */
+    margin: 0;            /* Sin margen exterior */
+    font-size: 0.9em;     /* Tamaño de fuente base */
+}
+
+/* Estilos específicos para el contenido CODE */
+#details-json-content {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; /* Fuente monoespaciada */
+    display: block;        /* Asegurar que ocupe su propio espacio (puede ayudar con line-height) */
+    padding: 0;           /* Sin padding interno */
+    margin: 0;            /* Sin margen interno */
+    /* Ya no necesita white-space ni line-height aquí, lo hereda/controla PRE */
+    /* Color de texto (si el PRE no lo define ya) */
+    /* color: #333; */ /* Puedes definir un color específico aquí si es necesario */
+}
+
+.copy-button {
+     /* float: right;
+     margin-bottom: 5px; */
+     padding: 3px 8px !important;
+     font-size: 0.9em;
+     background-color: var(--secondary-color);
+}
+.copy-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* --- Modales --- */
+.modal {
+    display: none; /* Oculto por defecto <<< CORREGIDO */
+    position: fixed;
+    z-index: 1050; /* Encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite scroll si el contenido es muy grande */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    /* Las siguientes propiedades se aplicarán cuando JS cambie display a flex */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--panel-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px; /* Ancho máximo */
+    position: relative;
+    max-height: 90vh; /* Altura máxima */
+    overflow-y: auto; /* Scroll si el contenido excede */
+}
+
+.close-modal-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+.close-modal-button:hover,
+.close-modal-button:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+.modal p, .modal li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.modal ol, .modal ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+.modal code { /* Para iconos inline en ayuda */
+    font-family: var(--font-family);
+    font-size: 1em;
+}
+.powered-by {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+}
+
+/* Modal Pegar JSON */
+#paste-json-textarea {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    margin-bottom: 10px;
+}
+.error-message {
+    color: var(--error-color);
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    min-height: 1.2em; /* Espacio aunque no haya error */
+}
+.modal-actions {
+    display: flex;
+    justify-content: flex-end; /* Botones a la derecha */
+    gap: 10px;
+    margin-top: 15px;
+}
+.modal-actions.filter-actions {
+    justify-content: center; /* Centrar botones Todos/Ninguno */
+    margin-bottom: 15px;
+}
+
+/* Modal Filtros */
+.filter-checkbox-container {
+    /* max-height: 300px;*/ /*Límite de altura para checkboxes */
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ejemplo con auto-fit */
+    gap: 10px; /* Espacio entre items */
+}
+
+/* Contenedor de cada item (checkbox + label) si usamos div */
+.filter-item {
+    display: flex; /* Para alinear checkbox y label si es necesario, aunque el label inline-flex es mejor */
+    align-items: center;
+}
+
+/* .filter-checkbox-container label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+} */
+.filter-checkbox-container label {
+    /* display: block; */ /* Cambiado de block a inline-flex */
+    margin-bottom: 0; /* Quitar margen inferior si gap es suficiente */
+    cursor: pointer;
+    display: inline-flex; /* Hace que el label se comporte como flex container */
+    align-items: center; /* Centra verticalmente el swatch y el texto */
+    gap: 6px; /* Espacio entre el swatch y el texto */
+    /* Opcional: asegurar que el texto no se desborde */
+    word-break: break-word;
+}
+
+.filter-checkbox-container input[type="checkbox"] {
+    /* margin-right: 10px; */
+    margin-right: 5px; /* Espacio entre checkbox y label */
+    vertical-align: middle; /* Alinear checkbox con label */
+    /* Hacer el checkbox un poco más grande si se desea */
+    transform: scale(1.1);
+}
+
+/* *** NUEVO: Estilo para el swatch de color *** */
+.filter-color-swatch {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #aaa;
+    border-radius: 3px; /* Ligeramente redondeado */
+    vertical-align: middle; /* Alinear con el texto */
+    flex-shrink: 0; /* Evitar que el swatch se encoja */
+}
+
+/* --- Botones Modernos --- */
+.modern-button, .icon-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+    font-size: 1em;
+    display: inline-flex; /* Para alinear icono y texto */
+    align-items: center;
+    gap: 5px; /* Espacio entre icono y texto */
+}
+.modern-button:hover, .icon-button:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.icon-button {
+    padding: 8px 10px; /* Más cuadrado para iconos solos */
+    font-size: 1.1em; /* Icono un poco más grande */
+    line-height: 1; /* Evita altura extra */
+}
+.icon-button i {
+    vertical-align: middle;
+}
+
+/* --- Estilos Específicos Vis.js --- */
+/* (Puedes ajustar estos según prefieras) */
+.vis-network {
+    outline: none; /* Quita el borde azul al hacer focus */
+}
+
+/* Nodos (Se definen mejor en las opciones de JS, pero puedes añadir CSS base) */
+.vis-network .vis-node {
+    font-family: var(--font-family);
+    /* shape: 'box' se define en JS */
+}
+
+/* Tooltips */
+/* div.vis-tooltip {
+    position: absolute;
+    visibility: hidden;
+    padding: 8px;
+    white-space: nowrap;
+    font-family: var(--font-family);
+    font-size: 13px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    z-index: 1010;
+    pointer-events: none; / * Para que no interfiera con el hover * /
+} */
+/* div.vis-tooltip ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+div.vis-tooltip li {
+    margin-bottom: 3px;
+} */
+
+div.vis-tooltip {
+    padding: 8px 12px;
+    font-family: var(--font-family);
+    font-size: 13px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    z-index: 1010; /* O un valor alto*/
+    white-space: nowrap !important; /* Permitir saltos de línea*/
+    max-width: 450px; /* Ancho máximo*/
+    pointer-events: none;
+}
+div.vis-tooltip ul { list-style: none; padding-left: 0; margin: 5px 0 0 0; }
+div.vis-tooltip li { margin-bottom: 3px; }
+div.vis-tooltip b { font-weight: 600; }
+div.vis-tooltip hr { margin: 4px 0; border: none; border-top: 1px solid #555; }
+
+.tooltip-ref-out { color: #90ee90; } /* Verde claro para referencias salientes */
+.tooltip-ref-in { color: #add8e6; } /* Azul claro para referencias entrantes */
+
+
+/* --- Responsividad Básica --- */
+@media (max-width: 768px) {
+    :root {
+        --panel-width: 250px; /* Paneles más estrechos */
+    }
+    .app-header h1 {
+        font-size: 1.2em;
+    }
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+    /* .side-panel {
+        / * Podrías hacer que ocupen más ancho en móviles si están visibles * /
+    } */
+    /* Ocultar texto en botones de control si es necesario */
+}
+
+.vis-navigation {
+    border: 5px dashed red !important; /* Borde muy visible */
+    background-color: rgba(255, 255, 0, 0.7) !important; /* Fondo amarillo semi-transparente */
+    position: fixed !important; /* Forzar posición fija en la ventana */
+    top: 60px !important;       /* Posición clara cerca de la cabecera */
+    left: 10px !important;
+    z-index: 100 !important;   /* Asegurar que esté encima de TODO */
+    width: auto !important;    /* Permitir que se ajuste al contenido */
+    height: auto !important;
+    padding: 5px !important;
+    display: block !important; /* Asegurar que se muestre como bloque */
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.vis-navigation .vis-button {
+    border: 1px solid blue !important; /* Borde azul para botones internos */
+    background-color: white !important;
+}
+
+/* En static/css/style.css (después de eliminar las reglas temporales) */
+
+.vis-network .vis-navigation { /* Ser más específico para evitar conflictos */
+    position: absolute; /* Posición relativa al contenedor .vis-network */
+    /* --- Elige UNA de las siguientes posiciones --- */
+
+    /* Opción 1: Abajo a la izquierda (Default, pero forzando valores) */
+    bottom: 15px !important;  /* Distancia desde abajo */
+    left: 150px !important;   /* Distancia desde la izquierda */
+    right: auto !important;  /* Asegurar que no esté pegado a la derecha */
+    top: auto !important;    /* Asegurar que no esté pegado arriba */
+
+    /* Opción 2: Abajo a la derecha */
+    /*
+    bottom: 15px !important;
+    right: 15px !important;
+    left: auto !important;
+    top: auto !important;
+    */
+
+    /* Opción 3: Arriba a la derecha */
+    /*
+    top: 15px !important;
+    right: 15px !important;
+    left: auto !important;
+    bottom: auto !important;
+    */
+
+    /* --- Z-index (Asegurar que esté visible sobre el grafo pero debajo de modales/paneles si es necesario) --- */
+    /* Los paneles tienen 1002, el trigger 1001. 1010 debería estar bien. */
+    z-index: 10 !important; /* z-index por defecto de vis.js es 10, ajústalo si se solapa */
+}
+
+/* Opcional: Estilos adicionales para los botones si es necesario */
+/* .vis-network .vis-navigation .vis-button { ... } */
+
+/* En static/css/style.css */
+
+body div.vis-tooltip { /* Añadimos 'body' para aumentar especificidad */
+    padding: 8px 12px !important;
+    font-family: var(--font-family) !important;
+    font-size: 13px !important;
+    /* === CONTROL DEL COLOR DE TEXTO BASE === */
+    color: #ffffff !important; /* Blanco para texto normal (ajusta si prefieres otro) */
+    /* ====================================== */
+    background-color: rgba(0, 0, 0, 0.85) !important; /* Fondo oscuro */
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--box-shadow) !important;
+    z-index: 1010 !important; /* Asegurar que esté encima */
+    white-space: nowrap !important; /* Permitir saltos de línea */
+    max-width: 600px !important; /* Ancho máximo */
+    text-align: left !important;
+    pointer-events: none !important;
+    border: none !important; /* Quitar posible borde por defecto */
+}
+
+/* Estilos para los elementos internos */
+body div.vis-tooltip ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 5px 0 0 0 !important;
+}
+body div.vis-tooltip li {
+    margin-bottom: 3px !important;
+}
+/* === COLORES PARA CONEXIONES (REFORZADO) === */
+body div.vis-tooltip span.tooltip-ref-out { /* Selector más específico */
+    color: #90ee90 !important; /* Verde claro - FORZADO */
+}
+body div.vis-tooltip span.tooltip-ref-in { /* Selector más específico */
+    color: #add8e6 !important; /* Azul claro - FORZADO */
+}
+/* ============================================ */
+body div.vis-tooltip b {
+    font-weight: 600 !important; /* Asegurar negrita */
+}
+body div.vis-tooltip hr {
+    margin: 4px 0 !important;
+    border: none !important;
+    border-top: 1px solid #555 !important; /* Separador un poco más oscuro */
+}
+xxx{
+    margin: #7ea166,
+}
+yyy{
+    margin: #6ebad8,
+}
+zzz{
+    margin: #d17ae7,
+}
+aaa{
+    margin: #93b322
+}
