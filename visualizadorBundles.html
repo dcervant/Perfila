@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Bundles FHIR</title>
+    <!-- Vis.js CSS -->
+    <!-- <link href="/static/lib/vis-network.min.css" rel="stylesheet" type="text/css" /> -->
+    <link href="https://unpkg.com/vis-network/styles/vis-network.min.css" rel="stylesheet" type="text/css" />
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Íconos (ejemplo usando Font Awesome - requiere configuración adicional o usa SVGs/imágenes) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <div class="logo">
+            <img src="/static/img/logo.png" alt="Logo" height="30"> <!-- Ajusta la ruta y tamaño -->
+        </div>
+        <h1>Visualizador de Bundles - Compass</h1>
+        <button id="help-button" class="icon-button" aria-label="Ayuda"><i class="fas fa-question-circle"></i></button>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="main-container">
+
+        <!-- *** NUEVO: Div para Tooltip Personalizado *** -->
+        <div id="custom-tooltip" class="vis-custom-tooltip"></div>
+        <!-- ******************************************* -->
+
+        <!-- Área de Visualización del Grafo -->
+        <div id="network-container">
+            <div id="loading-message">Nada que mostrar, carga un Bundle para visualizar.</div>
+        </div>
+
+        <!-- Botón para activar Panel de Controles -->
+        <button id="control-panel-trigger" class="panel-trigger left-trigger" aria-label="Abrir controles">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Panel de Controles (Izquierda, flotante) -->
+        <aside id="control-panel" class="side-panel left-panel">
+            <h3>Controles</h3>
+            <div class="control-group file-controls">
+                <input type="file" id="file-input" accept=".json" style="display: none;">
+                <button id="load-file-button" class="icon-button" aria-label="Cargar archivo JSON local">
+                    <i class="fas fa-folder-open"></i>
+                </button>
+                <span id="file-name">Ningún archivo cargado</span>
+                <button id="open-paste-modal-button" class="icon-button" aria-label="Pegar JSON">
+                    <i class="fas fa-paste"></i>
+                </button>
+                <button id="open-filter-modal-button" class="icon-button" aria-label="Abrir filtros">
+                    <i class="fas fa-filter"></i>
+                </button>
+            </div>
+
+            <div class="control-group visual-toggles">
+                <h4>Opciones de Visualización</h4>
+                <label><input type="checkbox" id="toggle-names" > Mostrar Nombres</label>
+                <label><input type="checkbox" id="toggle-ids" > Mostrar IDs</label>
+                <label><input type="checkbox" id="toggle-dates" > Mostrar Fechas</label>
+                <label><input type="checkbox" id="toggle-edge-labels" > Mostrar Etiquetas Aristas</label>
+                <label><input type="checkbox" id="toggle-tooltip-connections" checked> Mostrar Conexiones en Tooltip</label>
+                <label><input type="checkbox" id="toggle-adjust-on-drag"> Ajuste al mover</label>
+            </div>
+
+            <div class="control-group">
+                <label for="font-size-slider">Tamaño Fuente Nodos/Etiquetas:</label>
+                <input type="range" id="font-size-slider" min="8" max="24" value="14" step="1">
+                <span id="font-size-value">14px</span>
+                <button id="redraw-button" class="modern-button">Redibujar Grafo</button>
+            </div>
+
+            <div class="control-group focus-controls">
+                <label for="focus-resource-select">Enfocar Recurso:</label>
+                <select id="focus-resource-select">
+                    <option value="">-- Seleccionar Recurso --</option>
+                </select>
+                <button id="clear-focus-button" class="modern-button clear-button" aria-label="Limpiar enfoque">X</button>
+            </div>
+             <button id="close-control-panel" class="panel-close-button modern-button clear-button" aria-label="Cerrar controles">X</button>
+        </aside>
+
+        <!-- Panel de Detalles (Derecha, flotante) -->
+        <aside id="details-panel" class="side-panel right-panel">
+            <div class="panel-header">
+                 <h3>Detalles del Recurso</h3>
+                 <button id="close-details-panel" class="panel-close-button modern-button clear-button" aria-label="Cerrar detalles">X</button>
+            </div>
+            <div id="details-content">
+                <p><strong>Tipo:</strong> <span id="details-type">N/A</span></p>
+                <p><strong>ID:</strong> <span id="details-id">N/A</span></p>
+                <p><strong>Nombre:</strong> <span id="details-name">N/A</span></p>
+                <p><strong>Fecha:</strong> <span id="details-date">N/A</span></p>
+                <div class="details-subheader"> 
+                    <h4>JSON Completo:</h4>
+                    <button id="copy-json-button" class="modern-button copy-button" aria-label="Copiar JSON">
+                        <i class="fas fa-copy"></i> Copiar
+                    </button>
+                    </div>
+                <!-- <pre><code id="details-json">Selecciona un nodo para ver detalles.</code></pre> //Cambio Panel Detalle Recursos -->
+                <pre id="details-json-container"> <!-- Nuevo ID para el PRE //Cambio Panel Detalle Recursos--> 
+                    <code id="details-json-content">Selecciona un nodo para ver detalles.</code> <!-- Nuevo ID para el CODE -->
+                </pre>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Modales -->
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-button">×</span>
+            <h2>Ayuda - Visualizador de Bundles FHIR</h2>
+            <p>Esta herramienta permite visualizar Bundles FHIR R4 como grafos de red interactivos.</p>
+            <h4>Instrucciones:</h4>
+            <ol>
+                <li>Carga un Bundle FHIR usando el botón <i class="fas fa-folder-open"></i> (archivo local) o <i class="fas fa-paste"></i> (pegar JSON).</li>
+                <li>El grafo mostrará los recursos como nodos y las referencias entre ellos como aristas.</li>
+                <li>Usa el panel izquierdo (<i class="fas fa-bars"></i>) para controlar la visualización:
+                    <ul>
+                        <li>Mostrar/ocultar nombres, IDs, fechas en los nodos.</li>
+                        <li>Mostrar/ocultar etiquetas en las aristas.</li>
+                        <li>Ajustar tamaño de fuente.</li>
+                        <li>Filtrar recursos por tipo usando el botón <i class="fas fa-filter"></i>.</li>
+                        <li>Enfocar un recurso específico y sus vecinos usando el selector desplegable.</li>
+                    </ul>
+                </li>
+                 <li>Haz clic en un nodo para ver sus detalles en el panel derecho.</li>
+                 <li>Pasa el ratón sobre un nodo para ver un tooltip con información básica y conexiones.</li>
+                 <li>Usa el ratón para hacer zoom (rueda) y mover el grafo (arrastrar).</li>
+            </ol>
+            <p class="powered-by">Powered by Dherly Cervantes © 2025</p>
+        </div>
+    </div>
+
+    <div id="paste-json-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-button">×</span>
+            <h2>Pegar Contenido JSON del Bundle</h2>
+            <textarea id="paste-json-textarea" rows="15" placeholder="Pega aquí el contenido JSON de tu Bundle FHIR R4..."></textarea>
+            <div id="paste-json-error" class="error-message"></div>
+            <div class="modal-actions">
+                <button id="draw-pasted-json" class="modern-button">Dibujar Grafo</button>
+                <button id="clear-paste-json" class="modern-button clear-button">Limpiar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="filter-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-button">×</span>
+            <h2>Filtrar por Tipo de Recurso</h2>
+            <div class="modal-actions filter-actions">
+                <button id="filter-select-all" class="modern-button">Todos</button>
+                <button id="filter-select-none" class="modern-button">Ninguno</button>
+            </div>
+            <div id="filter-checkboxes" class="filter-checkbox-container">
+                <!-- Checkboxes se generarán dinámicamente aquí -->
+                <p>Carga un Bundle para ver los tipos de recurso.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Vis.js Library -->
+    <!-- <script type="text/javascript" src="/static/lib/vis-network.min.js"></script> -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <!-- Lógica de la aplicación -->
+    <script type="text/javascript" src="/static/js/script.js"></script>
+</body>
+</html>
