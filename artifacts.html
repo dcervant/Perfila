@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Artifacts Summary - Perfilamiento de recursos FHIR para pruebas de CUIDA v0.0.1</title>
+    <title>Artifacts Summary - Perfilamiento de recursos FHIR para pruebas - Interoperabilidad v0.0.5</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -83,13 +83,13 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Perfilamiento de recursos FHIR para pruebas de CUIDA</span>
+          <p><span style="font-size:12pt;font-weight:bold">Perfilamiento de recursos FHIR para pruebas - Interoperabilidad</span>
             <br/>
-            <span style="display:inline-block;">0.0.1 - ci-build
+            <span style="display:inline-block;">0.0.5 - ci-build
 
 
 
-  <span title="null">150</span>
+  Europe
 
 
             </span>
@@ -131,7 +131,7 @@
   <li>
     <a href="downloads.html">Descargas</a>
   </li>
-  <li><a name="l213">​</a>
+  <li><a name="l210">​</a>
     <a href="visualizadorBundles.html">Visualizador de Bundles</a>
   </li>
 </ul>
@@ -166,7 +166,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">Perfilamiento de recursos FHIR para pruebas de CUIDA - Local Development build (v0.0.1) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">Perfilamiento de recursos FHIR para pruebas - Interoperabilidad - Local Development build (v0.0.5) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>Artifacts Summary</h2>
   
   
@@ -201,7 +201,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <a href="StructureDefinition-LocationOH.html" title="StructureDefinition/LocationOH">Location</a>
             </td>
             <td>
-<p>Perfil FHIR para el recurso Location, adaptado para representar ubicaciones físicas, con énfasis en Establecimientos de Salud (IPRESS), dentro del Ecosistema de Salud y marco de interoperabilidad.</p>
+<p>Representa ubicaciones físicas en el Ecosistema de Salud, con especial énfasis en Establecimientos de Salud (IPRESS). Se utiliza para estandarizar su identificación, localización y características principales.</p>
 </td>
          </tr>
          <tr>
@@ -209,7 +209,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <a href="StructureDefinition-OrganizationOH.html" title="StructureDefinition/OrganizationOH">Organization</a>
             </td>
             <td>
-<p>Perfil FHIR para el recurso Organization, adaptado para representar diversas entidades organizacionales (proveedores de salud, aseguradoras, entidades gubernamentales como SUNAT o SUSALUD) dentro del Ecosistema de Salud y el marco de interoperabilidad peruano. Este perfil es fundamental para la correcta identificación y referenciación de las organizaciones que participan en el ecosistema.</p>
+<p>Representa a las diversas entidades organizacionales (como proveedores de salud, aseguradoras o entidades gubernamentales) en el Ecosistema de Salud peruano. Este perfil es fundamental para su correcta identificación y referenciación dentro del marco de interoperabilidad.</p>
 </td>
          </tr>
          <tr>
@@ -217,7 +217,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <a href="StructureDefinition-PatientOH.html" title="StructureDefinition/PatientOH">Patient</a>
             </td>
             <td>
-<p>Define el perfil del Paciente para el Ecosistema de Salud, centrado en la información específica del rol de paciente y su vinculación con el registro central de Persona (PersonOH).</p>
+<p>Representa el rol de pacientes en el Ecosistema de Salud. Se vincula al registro central de Persona y se centra en la información específica de dicho rol.</p>
 </td>
          </tr>
          <tr>
@@ -225,7 +225,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <a href="StructureDefinition-PersonOH.html" title="StructureDefinition/PersonOH">Person</a>
             </td>
             <td>
-<p>Define el conjunto mínimo de datos y las extensiones necesarias para representar una persona dentro del Ecosistema de Salud, sirviendo como la entidad central para la identificación y vinculación de individuos a través de diferentes roles y sistemas.</p>
+<p>Recurso que permite representar a una persona en el Ecosistema de Salud, continene el conjunto mínimo de datos y las extensiones necesarias para su representación. Sirve como la entidad central para la identificación y vinculación de individuos a través de diferentes roles y sistemas.</p>
 </td>
          </tr>
          <tr>
@@ -233,7 +233,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <a href="StructureDefinition-PractitionerOH.html" title="StructureDefinition/PractitionerOH">Practitioner</a>
             </td>
             <td>
-<p>Define el perfil del Profesional de la Salud (PractitionerOH) para el Ecosistema de Salud, detallando la información específica de su rol profesional, sus identificadores (incluyendo colegiatura) y cualificaciones. Este perfil se vincula con el registro central de Persona (PersonOH) para los datos demográficos fundamentales.</p>
+<p>Representa el rol del profesional de la salud en el Ecosistema de Salud. Se vincula al registro central de Persona (Person) y se centra en la información específica de su rol profesional</p>
 </td>
          </tr>
          <tr>
@@ -241,7 +241,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <a href="StructureDefinition-RelatedPersonOH.html" title="StructureDefinition/RelatedPersonOH">RelatedPerson</a>
             </td>
             <td>
-<p>Perfil FHIR para el recurso RelatedPerson, adaptado para representar a individuos que tienen una relación específica con un paciente (PatientOH) dentro del Ecosistema de Salud. Este perfil detalla la información de la persona relacionada, sus identificadores y la naturaleza de su vínculo con el paciente.</p>
+<p>Representa a individuos con una relación específica con un paciente (Patient) en el Ecosistema de Salud, como contactos de emergencia, cuidadores, o el titular de una póliza para un paciente dependiente. Detalla la información de la persona relacionada, sus identificadores y la naturaleza de su vínculo.</p>
 </td>
          </tr>
       </tbody>
@@ -794,7 +794,7 @@ Note 4:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 1
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://cuida.pruebas.dherly.Jur">CUIDA</a>.  Package cuida.pruebas.dherly#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 17, 2025 13:37-0500">2025-06-17</span>
+          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://cuida.pruebas.dherly.Jur">CUIDA</a>.  Package cuida.pruebas.dherly#0.0.5 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 17, 2025 16:55-0500">2025-06-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <div style="color: #333333">

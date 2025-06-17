@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>RelatedPerson - Perfilamiento de recursos FHIR para pruebas de CUIDA v0.0.1</title>
+    <title>RelatedPerson - Perfilamiento de recursos FHIR para pruebas - Interoperabilidad v0.0.5</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -83,13 +83,13 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Perfilamiento de recursos FHIR para pruebas de CUIDA</span>
+          <p><span style="font-size:12pt;font-weight:bold">Perfilamiento de recursos FHIR para pruebas - Interoperabilidad</span>
             <br/>
-            <span style="display:inline-block;">0.0.1 - ci-build
+            <span style="display:inline-block;">0.0.5 - ci-build
 
 
 
-  <span title="null">150</span>
+  Europe
 
 
             </span>
@@ -131,7 +131,7 @@
   <li>
     <a href="downloads.html">Descargas</a>
   </li>
-  <li><a name="l214">​</a>
+  <li><a name="l211">​</a>
     <a href="visualizadorBundles.html">Visualizador de Bundles</a>
   </li>
 </ul>
@@ -159,7 +159,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">Perfilamiento de recursos FHIR para pruebas de CUIDA - Local Development build (v0.0.1) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">Perfilamiento de recursos FHIR para pruebas - Interoperabilidad - Local Development build (v0.0.5) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   
 
 
@@ -239,7 +239,7 @@
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/RelatedPersonOH<button data-clipboard-text="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/RelatedPersonOH" title="Click to copy URL" class="btn-copy"></button></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.0.1<button data-clipboard-text="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/RelatedPersonOH|0.0.1" title="Click to copy versioned URL" class="btn-copy"></button></span>
+      <span class="copy-text">0.0.5<button data-clipboard-text="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/RelatedPersonOH|0.0.5" title="Click to copy versioned URL" class="btn-copy"></button></span>
       </td>
     </tr>
 
@@ -276,36 +276,36 @@
   </table>
 
 <p>
-<p>Perfil FHIR para el recurso RelatedPerson, adaptado para representar a individuos que tienen una relación específica con un paciente (PatientOH) dentro del Ecosistema de Salud. Este perfil detalla la información de la persona relacionada, sus identificadores y la naturaleza de su vínculo con el paciente.</p>
+<p>Representa a individuos con una relación específica con un paciente (Patient) en el Ecosistema de Salud, como contactos de emergencia, cuidadores, o el titular de una póliza para un paciente dependiente. Detalla la información de la persona relacionada, sus identificadores y la naturaleza de su vínculo.</p>
 
 </p>
 
 <p>
 
-<h1 id="perfil-relatedpersonoh-representación-de-personas-relacionadas-a-un-paciente">Perfil RelatedPersonOH: Representación de Personas Relacionadas a un Paciente</h1>
+<h1 id="perfil-relatedperson-representación-de-personas-relacionadas-a-un-paciente">Perfil RelatedPerson: Representación de Personas Relacionadas a un Paciente</h1>
 
 <h2 id="1-funcionalidad-principal">1. Funcionalidad Principal:</h2>
 
 <ul>
-  <li><strong>Representación de Vínculos y Rol de Puente:</strong> Modela a individuos con una relación relevante con un <code class="language-plaintext highlighter-rouge">PatientOH</code> (ej. contactos de emergencia, cuidadores). Crucialmente, <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> actúa como un <strong>puente</strong> cuando el <code class="language-plaintext highlighter-rouge">PatientOH</code> (quien recibe la atención) es un dependiente (ej. un menor de edad, un beneficiario de una póliza). En estos casos, el <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> representa al individuo titular de la póliza o responsable principal (quien tiene su propio registro <code class="language-plaintext highlighter-rouge">PersonOH</code>), estableciendo el vínculo entre este <code class="language-plaintext highlighter-rouge">PersonOH</code> (titular) y el <code class="language-plaintext highlighter-rouge">PatientOH</code> (dependiente). El <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> se vincula directamente al <code class="language-plaintext highlighter-rouge">PatientOH</code> del dependiente mediante el elemento <code class="language-plaintext highlighter-rouge">RelatedPerson.patient</code>.</li>
-  <li><strong>Conexión con el Paciente:</strong> Cada instancia de <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> <strong>debe</strong> estar vinculada directamente al recurso <code class="language-plaintext highlighter-rouge">PatientOH</code> del paciente con el cual existe la relación, a través del elemento <code class="language-plaintext highlighter-rouge">RelatedPerson.patient</code>.</li>
+  <li><strong>Representación de Vínculos y Rol de Puente:</strong> Modela a individuos con una relación relevante con un <code class="language-plaintext highlighter-rouge">Patient</code> (ej. contactos de emergencia, cuidadores). Crucialmente, <code class="language-plaintext highlighter-rouge">RelatedPerson</code> actúa como un <strong>puente</strong> cuando el <code class="language-plaintext highlighter-rouge">Patient</code> (quien recibe la atención) es un dependiente (ej. un menor de edad, un beneficiario de una póliza). En estos casos, el <code class="language-plaintext highlighter-rouge">RelatedPerson</code> representa al individuo titular de la póliza o responsable principal (quien tiene su propio registro <code class="language-plaintext highlighter-rouge">Person</code>), estableciendo el vínculo entre este <code class="language-plaintext highlighter-rouge">Person</code> (titular) y el <code class="language-plaintext highlighter-rouge">Patient</code> (dependiente). El <code class="language-plaintext highlighter-rouge">RelatedPerson</code> se vincula directamente al <code class="language-plaintext highlighter-rouge">Patient</code> del dependiente mediante el elemento <code class="language-plaintext highlighter-rouge">RelatedPerson.patient</code>.</li>
+  <li><strong>Conexión con el Paciente:</strong> Cada instancia de <code class="language-plaintext highlighter-rouge">RelatedPerson</code> <strong>debe</strong> estar vinculada directamente al recurso <code class="language-plaintext highlighter-rouge">Patient</code> del paciente con el cual existe la relación, a través del elemento <code class="language-plaintext highlighter-rouge">RelatedPerson.patient</code>.</li>
   <li><strong>Definición de la Relación:</strong> Especifica la naturaleza del vínculo entre la persona relacionada y el paciente mediante el elemento <code class="language-plaintext highlighter-rouge">relationship</code> (ej. padre, cónyuge, hijo, contacto de emergencia).</li>
   <li><strong>Gestión de Datos de la Persona Relacionada:</strong> Permite registrar información demográfica (nombre, contacto, género, fecha de nacimiento, dirección) e identificadores (DNI, RUC, etc.) de la persona relacionada directamente en este recurso.</li>
-  <li><strong>Coexistencia con PersonOH:</strong> Si la persona representada por <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> también es un individuo gestionado centralmente con un registro <code class="language-plaintext highlighter-rouge">PersonOH</code> en el ecosistema, se fomenta la coherencia de datos. El recurso <code class="language-plaintext highlighter-rouge">PersonOH</code> puede enlazar a un <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> a través de <code class="language-plaintext highlighter-rouge">Person.link.target</code> para indicar este rol específico. <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> gestiona sus propios datos demográficos e identificadores conforme a este perfil.</li>
+  <li><strong>Coexistencia con Person:</strong> Si la persona representada por <code class="language-plaintext highlighter-rouge">RelatedPerson</code> también es un individuo gestionado centralmente con un registro <code class="language-plaintext highlighter-rouge">Person</code> en el ecosistema, se fomenta la coherencia de datos. El recurso <code class="language-plaintext highlighter-rouge">Person</code> puede enlazar a un <code class="language-plaintext highlighter-rouge">RelatedPerson</code> a través de <code class="language-plaintext highlighter-rouge">Person.link.target</code> para indicar este rol específico. <code class="language-plaintext highlighter-rouge">RelatedPerson</code> gestiona sus propios datos demográficos e identificadores conforme a este perfil.</li>
 </ul>
 
-<h2 id="2-elementos-esenciales-obligatorios-en-relatedpersonoh">2. Elementos Esenciales (Obligatorios en <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code>)</h2>
+<h2 id="2-elementos-esenciales-obligatorios-en-relatedperson">2. Elementos Esenciales (Obligatorios en <code class="language-plaintext highlighter-rouge">RelatedPerson</code>)</h2>
 
-<p>Los siguientes elementos <strong>deben</strong> estar presentes en cada instancia de <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code>:</p>
+<p>Los siguientes elementos <strong>deben</strong> estar presentes en cada instancia de <code class="language-plaintext highlighter-rouge">RelatedPerson</code>:</p>
 
 <ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">patient</code> (Paciente Vinculado):</strong> Referencia obligatoria al recurso <code class="language-plaintext highlighter-rouge">PatientOH</code> con el cual esta persona está relacionada.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">patient</code> (Paciente Vinculado):</strong> Referencia obligatoria al recurso <code class="language-plaintext highlighter-rouge">Patient</code> con el cual esta persona está relacionada.</li>
   <li><strong><code class="language-plaintext highlighter-rouge">identifier</code> (Identificadores de la Persona Relacionada):</strong> Se requiere al menos la sección (slice) <code class="language-plaintext highlighter-rouge">NationalPersonIdentifier</code>.
     <ul>
       <li><strong><code class="language-plaintext highlighter-rouge">identifier[NationalPersonIdentifier]</code> (Identificación Nacional):</strong> Obligatorio. Documento nacional de identidad de la persona relacionada (DNI, Carnet de Extranjería, etc.).
         <ul>
           <li><code class="language-plaintext highlighter-rouge">use</code>: Uso del identificador (ej. <code class="language-plaintext highlighter-rouge">#official</code>).</li>
-          <li><code class="language-plaintext highlighter-rouge">type</code>: Tipo de documento nacional, proveniente del ValueSet <code class="language-plaintext highlighter-rouge">PeruPersonIdentifiersValueSetOH</code>.</li>
+          <li><code class="language-plaintext highlighter-rouge">type</code>: Tipo de documento nacional, proveniente del ValueSet <code class="language-plaintext highlighter-rouge">PeruPersonIdentifiersValueSet</code>.</li>
           <li><code class="language-plaintext highlighter-rouge">system</code>: URI de la entidad emisora (ej. <code class="language-plaintext highlighter-rouge">https://fhir.onehealth.com.pe/reniec</code> para DNI).</li>
           <li><code class="language-plaintext highlighter-rouge">value</code>: Número del documento de identidad.</li>
         </ul>
@@ -316,7 +316,7 @@
   <li><strong><code class="language-plaintext highlighter-rouge">relationship</code> (Tipo de Relación):</strong> Define la naturaleza del vínculo con el paciente. Aunque el perfil lo define como <code class="language-plaintext highlighter-rouge">0..1</code> (permitiendo a lo sumo un tipo de relación), si se incluye, es crucial para el contexto.</li>
 </ul>
 
-<h2 id="3-elementos-de-soporte-obligatorio-must-support---ms-en-relatedpersonoh">3. Elementos de Soporte Obligatorio (Must Support - MS en <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code>)</h2>
+<h2 id="3-elementos-de-soporte-obligatorio-must-support---ms-en-relatedperson">3. Elementos de Soporte Obligatorio (Must Support - MS en <code class="language-plaintext highlighter-rouge">RelatedPerson</code>)</h2>
 
 <p>Los sistemas que conformen con este perfil <strong>deben</strong> ser capaces de procesar y persistir (soportar) los siguientes elementos si están presentes:</p>
 
@@ -331,16 +331,16 @@
 <h2 id="4-lógica-de-identificadores-y-estrategia-de-búsqueda">4. Lógica de Identificadores y Estrategia de Búsqueda</h2>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> utiliza un sistema de <em>slicing</em> para el elemento <code class="language-plaintext highlighter-rouge">identifier</code> similar al perfil <code class="language-plaintext highlighter-rouge">PersonOH</code>, permitiendo registrar <code class="language-plaintext highlighter-rouge">NationalPersonIdentifier</code>, <code class="language-plaintext highlighter-rouge">TributaryIdentifier</code> (RUC), e <code class="language-plaintext highlighter-rouge">InsuranceIdentifier</code> para la persona relacionada.</li>
-  <li>La búsqueda de una <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> puede realizarse directamente por sus propios identificadores.</li>
-  <li>Adicionalmente, las personas relacionadas pueden ser localizadas a través del recurso <code class="language-plaintext highlighter-rouge">PatientOH</code> al que están vinculadas (buscando al paciente y luego navegando a sus <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code>).</li>
+  <li><code class="language-plaintext highlighter-rouge">RelatedPerson</code> utiliza un sistema de <em>slicing</em> para el elemento <code class="language-plaintext highlighter-rouge">identifier</code> similar al perfil <code class="language-plaintext highlighter-rouge">Person</code>, permitiendo registrar <code class="language-plaintext highlighter-rouge">NationalPersonIdentifier</code>, <code class="language-plaintext highlighter-rouge">TributaryIdentifier</code> (RUC), e <code class="language-plaintext highlighter-rouge">InsuranceIdentifier</code> para la persona relacionada.</li>
+  <li>La búsqueda de una <code class="language-plaintext highlighter-rouge">RelatedPerson</code> puede realizarse directamente por sus propios identificadores.</li>
+  <li>Adicionalmente, las personas relacionadas pueden ser localizadas a través del recurso <code class="language-plaintext highlighter-rouge">Patient</code> al que están vinculadas (buscando al paciente y luego navegando a sus <code class="language-plaintext highlighter-rouge">RelatedPerson</code>).</li>
 </ul>
 
 <h2 id="5-extensiones">5. Extensiones</h2>
 
 <ul>
-  <li>Este perfil <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> no define extensiones propias a nivel de <code class="language-plaintext highlighter-rouge">RelatedPerson.extension</code>.</li>
-  <li>Las extensiones para datos demográficos (ej. apellidos paterno/materno en <code class="language-plaintext highlighter-rouge">name.family</code>, extensiones de UBIGEO en <code class="language-plaintext highlighter-rouge">address</code>) se aplicarían directamente a los elementos correspondientes de <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> si se decide soportarlas de manera análoga al perfil <code class="language-plaintext highlighter-rouge">PersonOH</code>. Actualmente, el perfil <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> no incluye explícitamente estas extensiones en su definición para <code class="language-plaintext highlighter-rouge">name</code> o <code class="language-plaintext highlighter-rouge">address</code>.</li>
+  <li>Este perfil <code class="language-plaintext highlighter-rouge">RelatedPerson</code> no define extensiones propias a nivel de <code class="language-plaintext highlighter-rouge">RelatedPerson.extension</code>.</li>
+  <li>Las extensiones para datos demográficos (ej. apellidos paterno/materno en <code class="language-plaintext highlighter-rouge">name.family</code>, extensiones de UBIGEO en <code class="language-plaintext highlighter-rouge">address</code>) se aplicarían directamente a los elementos correspondientes de <code class="language-plaintext highlighter-rouge">RelatedPerson</code> si se decide soportarlas de manera análoga al perfil <code class="language-plaintext highlighter-rouge">Person</code>. Actualmente, el perfil <code class="language-plaintext highlighter-rouge">RelatedPerson</code> no incluye explícitamente estas extensiones en su definición para <code class="language-plaintext highlighter-rouge">name</code> o <code class="language-plaintext highlighter-rouge">address</code>.</li>
 </ul>
 
 <p>Este perfil es clave para documentar las redes de apoyo y contactos relevantes para la atención de un paciente, asegurando que esta información esté disponible y sea gestionable dentro del ecosistema.</p>
@@ -671,7 +671,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The nature of the relationship<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" title="http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype" class="binding">PatientRelationshipType</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">The nature of the relationship between a patient and the related person.</span><br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbRelatedPersonOHK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('RelatedPersonOHK'), 'binding', document.getElementById('cbRelatedPersonOHK-binding').checked, document.getElementById('ppRelatedPersonOHK'));
 document.getElementById('cbRelatedPersonOHK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1101,7 +1101,7 @@ filterDesc(document.getElementById('RelatedPersonOHK'), 'obligation', document.g
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbRelatedPersonOHD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('RelatedPersonOHD'), 'binding', document.getElementById('cbRelatedPersonOHD-binding').checked, document.getElementById('ppRelatedPersonOHD'));
 document.getElementById('cbRelatedPersonOHD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1534,7 +1534,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Language preference indicator</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbRelatedPersonOHS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('RelatedPersonOHS'), 'binding', document.getElementById('cbRelatedPersonOHS-binding').checked, document.getElementById('ppRelatedPersonOHS'));
 document.getElementById('cbRelatedPersonOHS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2029,7 +2029,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The nature of the relationship<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" title="http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype" class="binding">PatientRelationshipType</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">The nature of the relationship between a patient and the related person.</span><br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbRelatedPersonOHKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('RelatedPersonOHKA'), 'binding', document.getElementById('cbRelatedPersonOHKA-binding').checked, document.getElementById('ppRelatedPersonOHKA'));
 document.getElementById('cbRelatedPersonOHKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2459,7 +2459,7 @@ filterDesc(document.getElementById('RelatedPersonOHKA'), 'obligation', document.
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbRelatedPersonOHDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('RelatedPersonOHDA'), 'binding', document.getElementById('cbRelatedPersonOHDA-binding').checked, document.getElementById('ppRelatedPersonOHDA'));
 document.getElementById('cbRelatedPersonOHDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2891,7 +2891,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Language preference indicator</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbRelatedPersonOHSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('RelatedPersonOHSA'), 'binding', document.getElementById('cbRelatedPersonOHSA-binding').checked, document.getElementById('ppRelatedPersonOHSA'));
 document.getElementById('cbRelatedPersonOHSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3139,7 +3139,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://cuida.pruebas.dherly.Jur">CUIDA</a>.  Package cuida.pruebas.dherly#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 17, 2025 13:37-0500">2025-06-17</span>
+          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://cuida.pruebas.dherly.Jur">CUIDA</a>.  Package cuida.pruebas.dherly#0.0.5 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 17, 2025 16:55-0500">2025-06-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <div style="color: #333333">

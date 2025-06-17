@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Person - Perfilamiento de recursos FHIR para pruebas de CUIDA v0.0.1</title>
+    <title>Person - Perfilamiento de recursos FHIR para pruebas - Interoperabilidad v0.0.5</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -83,13 +83,13 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Perfilamiento de recursos FHIR para pruebas de CUIDA</span>
+          <p><span style="font-size:12pt;font-weight:bold">Perfilamiento de recursos FHIR para pruebas - Interoperabilidad</span>
             <br/>
-            <span style="display:inline-block;">0.0.1 - ci-build
+            <span style="display:inline-block;">0.0.5 - ci-build
 
 
 
-  <span title="null">150</span>
+  Europe
 
 
             </span>
@@ -131,7 +131,7 @@
   <li>
     <a href="downloads.html">Descargas</a>
   </li>
-  <li><a name="l214">​</a>
+  <li><a name="l211">​</a>
     <a href="visualizadorBundles.html">Visualizador de Bundles</a>
   </li>
 </ul>
@@ -159,7 +159,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">Perfilamiento de recursos FHIR para pruebas de CUIDA - Local Development build (v0.0.1) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">Perfilamiento de recursos FHIR para pruebas - Interoperabilidad - Local Development build (v0.0.5) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   
 
 
@@ -239,7 +239,7 @@
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH<button data-clipboard-text="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH" title="Click to copy URL" class="btn-copy"></button></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.0.1<button data-clipboard-text="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH|0.0.1" title="Click to copy versioned URL" class="btn-copy"></button></span>
+      <span class="copy-text">0.0.5<button data-clipboard-text="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PersonOH|0.0.5" title="Click to copy versioned URL" class="btn-copy"></button></span>
       </td>
     </tr>
 
@@ -276,25 +276,25 @@
   </table>
 
 <p>
-<p>Define el conjunto mínimo de datos y las extensiones necesarias para representar una persona dentro del Ecosistema de Salud, sirviendo como la entidad central para la identificación y vinculación de individuos a través de diferentes roles y sistemas.</p>
+<p>Recurso que permite representar a una persona en el Ecosistema de Salud, continene el conjunto mínimo de datos y las extensiones necesarias para su representación. Sirve como la entidad central para la identificación y vinculación de individuos a través de diferentes roles y sistemas.</p>
 
 </p>
 
 <p>
 
-<h1 id="perfil-personoh-representación-central-de-personas-o-individuos-en-el-ecosistema-de-salud">Perfil PersonOH: Representación Central de Personas o Individuos en el ecosistema de salud.</h1>
+<h1 id="perfil-person-representación-central-de-personas-o-individuos-en-el-ecosistema-de-salud">Perfil Person: Representación Central de Personas o Individuos en el ecosistema de salud.</h1>
 
 <h2 id="1-funcionalidad-principal">1. Funcionalidad Principal:</h2>
 
 <ul>
-  <li><strong>Entidad Central de Identificación:</strong> PersonOH actúa como el registro maestro de individuos. Cualquier otro recurso que represente a una persona en un rol específico (como <code class="language-plaintext highlighter-rouge">PatientOH</code> para pacientes, <code class="language-plaintext highlighter-rouge">PractitionerOH</code> para profesionales de la salud, o <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code> para personas relacionadas) <strong>debe</strong> estar vinculado a un recurso PersonOH. Esto asegura una única fuente de verdad para los datos demográficos básicos.</li>
-  <li><strong>Identificación Única de Personas:</strong>  PersonOH facilita la identificación unívoca de individuos a través del MRI utilizando los identificadores y el MPI utilizando datos como nombres, fecha de nacimiento, género e información de contacto.  Permite rastrear a una persona a través de diferentes sistemas y roles.</li>
-  <li><strong>Vinculación de Roles:</strong> Un mismo individuo (un recurso PersonOH) puede tener múltiples roles en el sistema de salud (por ejemplo, ser paciente y también profesional de la salud). El recurso PersonOH centraliza la información demográfica, mientras que los recursos de rol específico (<code class="language-plaintext highlighter-rouge">PatientOH</code>, <code class="language-plaintext highlighter-rouge">PractitionerOH</code>) contienen la información relevante a ese rol y se enlazan al PersonOH correspondiente.</li>
+  <li><strong>Entidad Central de Identificación:</strong> Person actúa como el registro maestro de individuos. Cualquier otro recurso que represente a una persona en un rol específico (como <code class="language-plaintext highlighter-rouge">Patient</code> para pacientes, <code class="language-plaintext highlighter-rouge">Practitioner</code> para profesionales de la salud, o <code class="language-plaintext highlighter-rouge">RelatedPerson</code> para personas relacionadas) <strong>debe</strong> estar vinculado a un recurso Person. Esto asegura una única fuente de verdad para los datos demográficos básicos.</li>
+  <li><strong>Identificación Única de Personas:</strong>  Person facilita la identificación unívoca de individuos a través del MRI utilizando los identificadores y el MPI utilizando datos como nombres, fecha de nacimiento, género e información de contacto.  Permite rastrear a una persona a través de diferentes sistemas y roles.</li>
+  <li><strong>Vinculación de Roles:</strong> Un mismo individuo (un recurso Person) puede tener múltiples roles en el sistema de salud (por ejemplo, ser paciente y también profesional de la salud). El recurso Person centraliza la información demográfica, mientras que los recursos de rol específico (<code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Practitioner</code>) contienen la información relevante a ese rol y se enlazan al Person correspondiente.</li>
 </ul>
 
 <h2 id="2-elementos-esenciales-obligatorios">2. Elementos Esenciales (Obligatorios)</h2>
 
-<p>Los siguientes elementos <strong>deben</strong> estar presentes en cada instancia de PersonOH:</p>
+<p>Los siguientes elementos <strong>deben</strong> estar presentes en cada instancia de Person:</p>
 
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">identifier</code> (Identificación Nacional):</strong> Al menos un identificador nacional (DNI / Pasaporte / Carnet de Extranjería, etc).</li>
@@ -306,7 +306,7 @@
   <li><strong><code class="language-plaintext highlighter-rouge">gender</code> (Género Administrativo):</strong> El género de la persona.</li>
   <li><strong><code class="language-plaintext highlighter-rouge">managingOrganization</code> (Organización Responsable):</strong> Referencia a la organización que administra o es dueña de este registro.</li>
   <li><strong><code class="language-plaintext highlighter-rouge">active</code> (Estado Activo):</strong> Indicador de si el registro de la persona está actualmente activo en el sistema.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">link</code> (Enlaces a Roles):</strong> Al menos un enlace a un recurso de rol (ej. <code class="language-plaintext highlighter-rouge">PatientOH</code>, <code class="language-plaintext highlighter-rouge">PractitionerOH</code>, <code class="language-plaintext highlighter-rouge">RelatedPersonOH</code>).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">link</code> (Enlaces a Roles):</strong> Al menos un enlace a un recurso de rol (ej. <code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Practitioner</code>, <code class="language-plaintext highlighter-rouge">RelatedPerson</code>).</li>
 </ul>
 
 <h2 id="3-elementos-de-soporte-obligatorio-must-support---ms">3. Elementos de Soporte Obligatorio (Must Support - MS)</h2>
@@ -1008,7 +1008,7 @@
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">level1 | level2 | level3 | level4<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html" title="http://hl7.org/fhir/ValueSet/identity-assuranceLevel" class="binding">IdentityAssuranceLevel</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbPersonOHK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PersonOHK'), 'binding', document.getElementById('cbPersonOHK-binding').checked, document.getElementById('ppPersonOHK'));
 document.getElementById('cbPersonOHK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1827,7 +1827,7 @@ filterDesc(document.getElementById('PersonOHK'), 'obligation', document.getEleme
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">level1 | level2 | level3 | level4</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html" title="http://hl7.org/fhir/ValueSet/identity-assuranceLevel" class="binding">IdentityAssuranceLevel</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbPersonOHD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PersonOHD'), 'binding', document.getElementById('cbPersonOHD-binding').checked, document.getElementById('ppPersonOHD'));
 document.getElementById('cbPersonOHD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2428,7 +2428,7 @@ filterDesc(document.getElementById('PersonOHD'), 'obligation', document.getEleme
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">level1 | level2 | level3 | level4<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html" title="http://hl7.org/fhir/ValueSet/identity-assuranceLevel" class="binding">IdentityAssuranceLevel</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbPersonOHS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PersonOHS'), 'binding', document.getElementById('cbPersonOHS-binding').checked, document.getElementById('ppPersonOHS'));
 document.getElementById('cbPersonOHS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3281,7 +3281,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">level1 | level2 | level3 | level4<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html" title="http://hl7.org/fhir/ValueSet/identity-assuranceLevel" class="binding">IdentityAssuranceLevel</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbPersonOHKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PersonOHKA'), 'binding', document.getElementById('cbPersonOHKA-binding').checked, document.getElementById('ppPersonOHKA'));
 document.getElementById('cbPersonOHKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4100,7 +4100,7 @@ filterDesc(document.getElementById('PersonOHKA'), 'obligation', document.getElem
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">level1 | level2 | level3 | level4</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html" title="http://hl7.org/fhir/ValueSet/identity-assuranceLevel" class="binding">IdentityAssuranceLevel</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbPersonOHDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PersonOHDA'), 'binding', document.getElementById('cbPersonOHDA-binding').checked, document.getElementById('ppPersonOHDA'));
 document.getElementById('cbPersonOHDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4700,7 +4700,7 @@ filterDesc(document.getElementById('PersonOHDA'), 'obligation', document.getElem
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">level1 | level2 | level3 | level4<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-identity-assuranceLevel.html" title="http://hl7.org/fhir/ValueSet/identity-assuranceLevel" class="binding">IdentityAssuranceLevel</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">El nivel de confianza de que este enlace representa a la misma persona real, según los niveles de autenticación del NIST.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbPersonOHSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PersonOHSA'), 'binding', document.getElementById('cbPersonOHSA-binding').checked, document.getElementById('ppPersonOHSA'));
 document.getElementById('cbPersonOHSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -5028,7 +5028,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://cuida.pruebas.dherly.Jur">CUIDA</a>.  Package cuida.pruebas.dherly#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 17, 2025 13:37-0500">2025-06-17</span>
+          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://cuida.pruebas.dherly.Jur">CUIDA</a>.  Package cuida.pruebas.dherly#0.0.5 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 17, 2025 16:55-0500">2025-06-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <div style="color: #333333">

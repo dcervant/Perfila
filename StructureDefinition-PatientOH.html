@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Patient - Perfilamiento de recursos FHIR para pruebas de CUIDA v0.0.1</title>
+    <title>Patient - Perfilamiento de recursos FHIR para pruebas - Interoperabilidad v0.0.5</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -83,13 +83,13 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Perfilamiento de recursos FHIR para pruebas de CUIDA</span>
+          <p><span style="font-size:12pt;font-weight:bold">Perfilamiento de recursos FHIR para pruebas - Interoperabilidad</span>
             <br/>
-            <span style="display:inline-block;">0.0.1 - ci-build
+            <span style="display:inline-block;">0.0.5 - ci-build
 
 
 
-  <span title="null">150</span>
+  Europe
 
 
             </span>
@@ -131,7 +131,7 @@
   <li>
     <a href="downloads.html">Descargas</a>
   </li>
-  <li><a name="l214">​</a>
+  <li><a name="l211">​</a>
     <a href="visualizadorBundles.html">Visualizador de Bundles</a>
   </li>
 </ul>
@@ -159,7 +159,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">Perfilamiento de recursos FHIR para pruebas de CUIDA - Local Development build (v0.0.1) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">Perfilamiento de recursos FHIR para pruebas - Interoperabilidad - Local Development build (v0.0.5) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   
 
 
@@ -239,7 +239,7 @@
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PatientOH<button data-clipboard-text="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PatientOH" title="Click to copy URL" class="btn-copy"></button></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.0.1<button data-clipboard-text="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PatientOH|0.0.1" title="Click to copy versioned URL" class="btn-copy"></button></span>
+      <span class="copy-text">0.0.5<button data-clipboard-text="http://cuida.pruebas.dherly.jurisdiction/fhir/laboratory/StructureDefinition/PatientOH|0.0.5" title="Click to copy versioned URL" class="btn-copy"></button></span>
       </td>
     </tr>
 
@@ -276,26 +276,26 @@
   </table>
 
 <p>
-<p>Define el perfil del Paciente para el Ecosistema de Salud, centrado en la información específica del rol de paciente y su vinculación con el registro central de Persona (PersonOH).</p>
+<p>Representa el rol de pacientes en el Ecosistema de Salud. Se vincula al registro central de Persona y se centra en la información específica de dicho rol.</p>
 
 </p>
 
 <p>
 
-<h1 id="perfil-patientoh-representación-del-rol-de-paciente-en-el-ecosistema-de-salud">Perfil PatientOH: Representación del Rol de Paciente en el Ecosistema de Salud</h1>
+<h1 id="perfil-patient-representación-del-rol-de-paciente-en-el-ecosistema-de-salud">Perfil Patient: Representación del Rol de Paciente en el Ecosistema de Salud</h1>
 
 <h2 id="1-funcionalidad-principal">1. Funcionalidad Principal:</h2>
 
 <ul>
-  <li><strong>Representación del Rol de Paciente:</strong> Mientras <code class="language-plaintext highlighter-rouge">PersonOH</code> gestiona la información demográfica central y los identificadores generales de un individuo, <code class="language-plaintext highlighter-rouge">PatientOH</code> se enfoca en los datos relevantes para la atención médica y administrativa del paciente.</li>
-  <li><strong>Vinculación Obligatoria a PersonOH:</strong> Cada recurso <code class="language-plaintext highlighter-rouge">PatientOH</code> <strong>debe</strong> estar asociado a un recurso <code class="language-plaintext highlighter-rouge">PersonOH</code> a través del cual se accede a la información demográfica fundamental (nombres, género, fecha de nacimiento, telecomunicaciones y direcciones generales). Esta vinculación se establece desde el recurso <code class="language-plaintext highlighter-rouge">PersonOH</code> (mediante <code class="language-plaintext highlighter-rouge">Person.link.target</code> apuntando a <code class="language-plaintext highlighter-rouge">PatientOH</code>). El perfil <code class="language-plaintext highlighter-rouge">PatientOH</code> intencionadamente omite la duplicación de estos datos demográficos (<code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">telecom</code>, <code class="language-plaintext highlighter-rouge">gender</code>, <code class="language-plaintext highlighter-rouge">birthDate</code>, <code class="language-plaintext highlighter-rouge">address</code>).</li>
-  <li><strong>Gestión de Identificadores de Paciente:</strong> <code class="language-plaintext highlighter-rouge">PatientOH</code> es responsable de gestionar los números de historia clínica (<code class="language-plaintext highlighter-rouge">identifier</code>) asignados al paciente por las diversas organizaciones proveedoras de salud.</li>
+  <li><strong>Representación del Rol de Paciente:</strong> Mientras <code class="language-plaintext highlighter-rouge">Person</code> gestiona la información demográfica central y los identificadores generales de un individuo, <code class="language-plaintext highlighter-rouge">Patient</code> se enfoca en los datos relevantes para la atención médica y administrativa del paciente.</li>
+  <li><strong>Vinculación Obligatoria a Person:</strong> Cada recurso <code class="language-plaintext highlighter-rouge">Patient</code> <strong>debe</strong> estar asociado a un recurso <code class="language-plaintext highlighter-rouge">Person</code> a través del cual se accede a la información demográfica fundamental (nombres, género, fecha de nacimiento, telecomunicaciones y direcciones generales). Esta vinculación se establece desde el recurso <code class="language-plaintext highlighter-rouge">Person</code> (mediante <code class="language-plaintext highlighter-rouge">Person.link.target</code> apuntando a <code class="language-plaintext highlighter-rouge">Patient</code>). El perfil <code class="language-plaintext highlighter-rouge">Patient</code> intencionadamente omite la duplicación de estos datos demográficos (<code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">telecom</code>, <code class="language-plaintext highlighter-rouge">gender</code>, <code class="language-plaintext highlighter-rouge">birthDate</code>, <code class="language-plaintext highlighter-rouge">address</code>).</li>
+  <li><strong>Gestión de Identificadores de Paciente:</strong> <code class="language-plaintext highlighter-rouge">Patient</code> es responsable de gestionar los números de historia clínica (<code class="language-plaintext highlighter-rouge">identifier</code>) asignados al paciente por las diversas organizaciones proveedoras de salud.</li>
   <li><strong>Información Específica del Paciente:</strong> Captura datos como el estado civil, contactos de emergencia, y clasificaciones o religiones relevantes para la atención.</li>
 </ul>
 
 <h2 id="2-elementos-esenciales">2. Elementos Esenciales</h2>
 
-<p>Los siguientes elementos <strong>deben</strong> estar presentes en cada instancia de <code class="language-plaintext highlighter-rouge">PatientOH</code>:</p>
+<p>Los siguientes elementos <strong>deben</strong> estar presentes en cada instancia de <code class="language-plaintext highlighter-rouge">Patient</code>:</p>
 
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">identifier</code> (Número de Historia Clínica):</strong> Al menos un número de historia clínica asignado por una organización proveedora.
@@ -304,7 +304,7 @@
       <li><code class="language-plaintext highlighter-rouge">identifier.type.coding.code</code>: Debe ser <code class="language-plaintext highlighter-rouge">#MR</code> (Medical Record Number).</li>
       <li><code class="language-plaintext highlighter-rouge">identifier.system</code>: URI del sistema de información que asigna el número de historia clínica.</li>
       <li><code class="language-plaintext highlighter-rouge">identifier.value</code>: El valor del número de historia clínica.</li>
-      <li><code class="language-plaintext highlighter-rouge">identifier.assigner</code>: Referencia a la <code class="language-plaintext highlighter-rouge">OrganizationOH</code> que asigna el identificador.</li>
+      <li><code class="language-plaintext highlighter-rouge">identifier.assigner</code>: Referencia a la <code class="language-plaintext highlighter-rouge">Organization</code> que asigna el identificador.</li>
     </ul>
   </li>
   <li><strong><code class="language-plaintext highlighter-rouge">active</code> (Estado del Paciente):</strong> Indica si el registro del paciente está activo para la atención.</li>
@@ -314,24 +314,24 @@
 
 <h2 id="4-lógica-de-identificadores-y-estrategia-de-búsqueda">4. Lógica de Identificadores y Estrategia de Búsqueda</h2>
 
-<p><strong>Almacenamiento de Identificadores en PatientOH:</strong>
-El elemento <code class="language-plaintext highlighter-rouge">identifier</code> en <code class="language-plaintext highlighter-rouge">PatientOH</code> se utiliza exclusivamente para los números de historia clínica (MRN) asignados por las organizaciones proveedoras de salud.</p>
+<p><strong>Almacenamiento de Identificadores en Patient:</strong>
+El elemento <code class="language-plaintext highlighter-rouge">identifier</code> en <code class="language-plaintext highlighter-rouge">Patient</code> se utiliza exclusivamente para los números de historia clínica (MRN) asignados por las organizaciones proveedoras de salud.</p>
 
 <ul>
   <li>Cada <code class="language-plaintext highlighter-rouge">identifier</code> representa un MRN de una institución específica.</li>
   <li><code class="language-plaintext highlighter-rouge">identifier.type</code> se fija a 'MR'.</li>
   <li><code class="language-plaintext highlighter-rouge">identifier.system</code> identifica el sistema de la organización proveedora que emitió el MRN.</li>
-  <li><code class="language-plaintext highlighter-rouge">identifier.assigner</code> referencia a la <code class="language-plaintext highlighter-rouge">OrganizationOH</code> proveedora.</li>
+  <li><code class="language-plaintext highlighter-rouge">identifier.assigner</code> referencia a la <code class="language-plaintext highlighter-rouge">Organization</code> proveedora.</li>
   <li>Un paciente puede tener múltiples <code class="language-plaintext highlighter-rouge">identifier</code> si ha sido atendido en varias instituciones.</li>
 </ul>
 
 <p><strong>Estrategia de Búsqueda de Pacientes:</strong>
-La localización de un recurso <code class="language-plaintext highlighter-rouge">PatientOH</code> en el Ecosistema de Salud se realiza primordialmente a través de los identificadores del recurso <code class="language-plaintext highlighter-rouge">PersonOH</code> al que está vinculado. Esto significa que para encontrar a un paciente, se utilizan los identificadores nacionales o generales (como DNI, pasaporte, etc.) almacenados en <code class="language-plaintext highlighter-rouge">PersonOH</code>.
-Esta búsqueda indirecta aprovecha las mismas estrategias robustas de manejo de identificadores definidas para <code class="language-plaintext highlighter-rouge">PersonOH</code> (búsqueda por valor exacto, valor sin ceros iniciales, y normalizaciones específicas), asegurando una alta probabilidad de encontrar al paciente correcto incluso con variaciones en los datos de entrada. Los resultados de la búsqueda se filtran para devolver únicamente recursos conformes al perfil <code class="language-plaintext highlighter-rouge">PatientOH</code>.</p>
+La localización de un recurso <code class="language-plaintext highlighter-rouge">Patient</code> en el Ecosistema de Salud se realiza primordialmente a través de los identificadores del recurso <code class="language-plaintext highlighter-rouge">Person</code> al que está vinculado. Esto significa que para encontrar a un paciente, se utilizan los identificadores nacionales o generales (como DNI, pasaporte, etc.) almacenados en <code class="language-plaintext highlighter-rouge">Person</code>.
+Esta búsqueda indirecta aprovecha las mismas estrategias robustas de manejo de identificadores definidas para <code class="language-plaintext highlighter-rouge">Person</code> (búsqueda por valor exacto, valor sin ceros iniciales, y normalizaciones específicas), asegurando una alta probabilidad de encontrar al paciente correcto incluso con variaciones en los datos de entrada. Los resultados de la búsqueda se filtran para devolver únicamente recursos conformes al perfil <code class="language-plaintext highlighter-rouge">Patient</code>.</p>
 
 <h2 id="5-extensiones-específicas-del-paciente">5. Extensiones (Específicas del Paciente)</h2>
 
-<p>El perfil <code class="language-plaintext highlighter-rouge">PatientOH</code> utiliza las siguientes extensiones para capturar información adicional relevante:</p>
+<p>El perfil <code class="language-plaintext highlighter-rouge">Patient</code> utiliza las siguientes extensiones para capturar información adicional relevante:</p>
 
 <ul>
   <li><strong>Para <code class="language-plaintext highlighter-rouge">Patient.extension</code>:</strong>
@@ -368,7 +368,7 @@ Esta búsqueda indirecta aprovecha las mismas estrategias robustas de manejo de 
   </li>
 </ul>
 
-<p>Este perfil <code class="language-plaintext highlighter-rouge">PatientOH</code>, en conjunto con <code class="language-plaintext highlighter-rouge">PersonOH</code>, asegura una representación completa y no redundante de los individuos, separando la identidad central de la información específica del rol de paciente.</p>
+<p>Este perfil <code class="language-plaintext highlighter-rouge">Patient</code>, en conjunto con <code class="language-plaintext highlighter-rouge">Person</code>, asegura una representación completa y no redundante de los individuos, separando la identidad central de la información específica del rol de paciente.</p>
 
 </p>
 
@@ -629,7 +629,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Given names (not always 'first'). Includes middle names<br/>This repeating element order: Given Names appear in the correct order for presenting the name</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbPatientOHK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PatientOHK'), 'binding', document.getElementById('cbPatientOHK-binding').checked, document.getElementById('ppPatientOHK'));
 document.getElementById('cbPatientOHK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1002,7 +1002,7 @@ filterDesc(document.getElementById('PatientOHK'), 'obligation', document.getElem
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbPatientOHD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PatientOHD'), 'binding', document.getElementById('cbPatientOHD-binding').checked, document.getElementById('ppPatientOHD'));
 document.getElementById('cbPatientOHD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1493,7 +1493,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/organization.html">Organization</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Organization that is the custodian of the patient record</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbPatientOHS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PatientOHS'), 'binding', document.getElementById('cbPatientOHS-binding').checked, document.getElementById('ppPatientOHS'));
 document.getElementById('cbPatientOHS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1969,7 +1969,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Given names (not always 'first'). Includes middle names<br/>This repeating element order: Given Names appear in the correct order for presenting the name</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbPatientOHKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PatientOHKA'), 'binding', document.getElementById('cbPatientOHKA-binding').checked, document.getElementById('ppPatientOHKA'));
 document.getElementById('cbPatientOHKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2342,7 +2342,7 @@ filterDesc(document.getElementById('PatientOHKA'), 'obligation', document.getEle
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbPatientOHDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PatientOHDA'), 'binding', document.getElementById('cbPatientOHDA-binding').checked, document.getElementById('ppPatientOHDA'));
 document.getElementById('cbPatientOHDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2832,7 +2832,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/organization.html">Organization</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Organization that is the custodian of the patient record</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a232a263-e4af-491a-8d82-c33ae4003ca9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 83fa17a7-f0e4-45d6-ab41-00949b5f5b3e
 document.getElementById('cbPatientOHSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('PatientOHSA'), 'binding', document.getElementById('cbPatientOHSA-binding').checked, document.getElementById('ppPatientOHSA'));
 document.getElementById('cbPatientOHSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3128,7 +3128,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://cuida.pruebas.dherly.Jur">CUIDA</a>.  Package cuida.pruebas.dherly#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 17, 2025 13:37-0500">2025-06-17</span>
+          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://cuida.pruebas.dherly.Jur">CUIDA</a>.  Package cuida.pruebas.dherly#0.0.5 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 17, 2025 16:55-0500">2025-06-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <div style="color: #333333">
