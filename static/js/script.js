@@ -66,11 +66,11 @@ window.addEventListener('DOMContentLoaded', () => {
         'Patient': '#93FF1A', // Verde claro
         'Encounter': '#4cc078', // Verde claro
         'List': '#ff8080', // Rojo claro
-        'Observation': '#FFFFCC', // Amarillo claro
+        'Observation': '#5e5e07ff', // Amarillo oscuro
         'ValueSet': '#FFFFCC', // Amarillo claro
         'Practitioner': '#FFBB99', // Durazno
         'MedicationStatement': '#ffb3ff', // Rosa claro
-        'MedicationRequest': '#ffb3ff', // Rosa claro
+        'MedicationRequest': '#583b58ff', // Rosa oscuro
         'CarePlan': '#FF9900', // Naranja
         'Sequence': '#FF9900', // Naranja
         'CareTeam': '#ffe6ff', // Lila claro
@@ -94,7 +94,7 @@ window.addEventListener('DOMContentLoaded', () => {
         'Appointment': '#ADD8E6', // Azul claro
         'Person': '#9696f7', //'#E6E6FA', // Lavanda
         'RelatedPerson': '#E6E6FA', // Lavanda
-        'RequestGroup': '#DAE8FC', // Azul grisáceo
+        'RequestGroup': '#587398ff', // Azul grisáceo
         'AllergyIntolerance': '#8e5615', // Marrón claro
         'ExplanationOfBenefit': '#d86d42' // Naranja claro
     };
