@@ -146,6 +146,8 @@ window.addEventListener('DOMContentLoaded', () => {
             font: {
                 size: 12, // Tamaño inicial etiquetas de arista
                 align: 'horizontal', // Etiqueta horizontal
+				vadjust: -10,
+				size: 12,
                 strokeWidth: 2, // Contorno blanco para legibilidad
                 strokeColor: '#ffffff'
             },
@@ -160,7 +162,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 // type: "arc", // Tipo de curva
                 // type: "curvedCW", // Tipo de curva
                 // forceDirection: 'horizontal',
-                roundness: 0.5
+                roundness: 0.4
             },
             width: 1, // Grosor línea
             selectionWidth: 2.5, // Puedes ajustar este valor (p.ej., 2, 2.5, 3)
