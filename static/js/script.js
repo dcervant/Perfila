@@ -136,7 +136,7 @@ window.addEventListener('DOMContentLoaded', () => {
         },
         edges: {
             arrows: {
-                to: { enabled: true, scaleFactor: 0.7 } // Flechas en las aristas
+                to: { enabled: true, scaleFactor: 0.99 } // Flechas en las aristas
             },
             color: {
                 color: '#848484', // Color por defecto
@@ -160,7 +160,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 // type: "arc", // Tipo de curva
                 // type: "curvedCW", // Tipo de curva
                 // forceDirection: 'horizontal',
-                roundness: 0.9
+                roundness: 0.5
             },
             width: 1, // Grosor línea
             selectionWidth: 2.5, // Puedes ajustar este valor (p.ej., 2, 2.5, 3)
